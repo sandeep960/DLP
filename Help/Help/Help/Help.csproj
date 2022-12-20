@@ -1,0 +1,1751 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA92EA5E-157B-440C-A775-1863EB10E62E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Help</RootNamespace>
+    <AssemblyName>Help</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\..\References\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\..\References\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Core">
+      <HintPath>..\..\References\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.S3">
+      <HintPath>..\..\References\AWSSDK.S3.dll</HintPath>
+    </Reference>
+    <Reference Include="BundleTransformer.Core">
+      <HintPath>..\..\References\BundleTransformer.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BundleTransformer.UglifyJs">
+      <HintPath>..\..\References\BundleTransformer.UglifyJs.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper">
+      <HintPath>..\..\References\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet">
+      <HintPath>..\..\References\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core">
+      <HintPath>..\..\References\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth">
+      <HintPath>..\..\References\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer">
+      <HintPath>..\..\References\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId">
+      <HintPath>..\..\References\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty">
+      <HintPath>..\..\References\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\References\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis">
+      <HintPath>..\..\References\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth">
+      <HintPath>..\..\References\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices">
+      <HintPath>..\..\References\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Calendar.v3">
+      <HintPath>..\..\References\Google.Apis.Calendar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core">
+      <HintPath>..\..\References\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices">
+      <HintPath>..\..\References\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="HiQPdf">
+      <HintPath>..\..\References\HiQPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\References\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker">
+      <HintPath>..\..\References\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="JavaScriptEngineSwitcher.Core">
+      <HintPath>..\..\References\JavaScriptEngineSwitcher.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="JavaScriptEngineSwitcher.Msie">
+      <HintPath>..\..\References\JavaScriptEngineSwitcher.Msie.dll</HintPath>
+    </Reference>
+    <Reference Include="Kendo.Mvc">
+      <HintPath>..\..\References\Kendo.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\References\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Key2Options\Web\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Key2Options\Web\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Key2Options\Web\Key2OptionsUI\bin\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Key2Options\Web\Key2OptionsUI\bin\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Key2Options\Web\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Key2Options\Web\packages\Microsoft.AspNet.WebPages.OAuth.2.0.30506.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="MsieJavaScriptEngine, Version=1.5.6.0, Culture=neutral, PublicKeyToken=a3a2846a37ac0d3e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\MsieJavaScriptEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Key2Options\Web\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity.Design" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Key2Options\Web\Key2OptionsUI\bin\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Web.Http.OData">
+      <HintPath>..\..\..\Key2Options\Web\Key2OptionsUI\bin\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Key2Options\Web\Key2OptionsUI\bin\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Key2Options\Web\Key2OptionsUI\bin\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Key2Options\Web\Key2OptionsUI\bin\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Key2Options\Web\Key2OptionsUI\bin\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Key2Options\Web\Key2OptionsUI\bin\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Key2Options\Web\Key2OptionsUI\bin\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Key2Options\Web\Key2OptionsUI\bin\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\..\..\Key2Options\Web\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Key2Options\Web\Key2OptionsUI\bin\WebMatrix.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Key2Options\Web\Key2OptionsUI\bin\WebMatrix.WebData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Zlib.Portable">
+      <HintPath>..\..\..\Key2Options\Web\packages\Zlib.Portable.Signed.1.11.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Zlib.Portable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\..\References\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\..\References\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\K2OBaseController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\A_Introduction Topics\Introduction.htm" />
+    <Content Include="Content\A_Introduction Topics\Menu.htm" />
+    <Content Include="Content\B_Stocks Menu\Charts.htm" />
+    <Content Include="Content\B_Stocks Menu\Compare.htm" />
+    <Content Include="Content\B_Stocks Menu\Screener.htm" />
+    <Content Include="Content\B_Stocks Menu\SD Stress Test.htm" />
+    <Content Include="Content\B_Stocks Menu\State Modeling.htm" />
+    <Content Include="Content\B_Stocks Menu\STOCKS.htm" />
+    <Content Include="Content\B_Stocks Menu\StocksOverview.htm" />
+    <Content Include="Content\C_Options_Menu\OPTIONS.htm" />
+    <Content Include="Content\C_Options_Menu\OptionsChain.htm" />
+    <Content Include="Content\C_Options_Menu\Sentiment.htm" />
+    <Content Include="Content\C_Options_Menu\Unusual Option.htm" />
+    <Content Include="Content\C_Options_Menu\Volatility.htm" />
+    <Content Include="Content\D_Earnings_Menu\Analysis.htm" />
+    <Content Include="Content\D_Earnings_Menu\Calendar.htm" />
+    <Content Include="Content\D_Earnings_Menu\EARNINGS.htm" />
+    <Content Include="Content\D_Earnings_Menu\Mywatchlist.htm" />
+    <Content Include="Content\D_Earnings_Menu\Plan.htm" />
+    <Content Include="Content\D_Earnings_Menu\Stocklist.htm" />
+    <Content Include="Content\D_Earnings_Menu\Symbol.htm" />
+    <Content Include="Content\D_Earnings_Menu\Todaystransition.htm" />
+    <Content Include="Content\E_BackTestTools_Menu\BackTest Report.htm" />
+    <Content Include="Content\E_BackTestTools_Menu\BACKTEST.htm" />
+    <Content Include="Content\E_BackTestTools_Menu\Earnings Wizard.htm" />
+    <Content Include="Content\E_BackTestTools_Menu\Import Wizard.htm" />
+    <Content Include="Content\E_BackTestTools_Menu\IV Ranker Wizard.htm" />
+    <Content Include="Content\E_BackTestTools_Menu\Manual Wizard.htm" />
+    <Content Include="Content\E_BackTestTools_Menu\Monthly Trade Wizard.htm" />
+    <Content Include="Content\E_BackTestTools_Menu\Quick BackTest.htm" />
+    <Content Include="Content\E_BackTestTools_Menu\Signal Wizard.htm" />
+    <Content Include="Content\E_BackTestTools_Menu\State Model Wizard.htm" />
+    <Content Include="Content\E_BackTestTools_Menu\Weekly Trade Wizard.htm" />
+    <Content Include="Content\E_BackTestTools_Menu\Wizards.htm" />
+    <Content Include="Content\F_Organizer\Backtested Rules.htm" />
+    <Content Include="Content\F_Organizer\Buy Sell Criteria.htm" />
+    <Content Include="Content\F_Organizer\Capital Plan.htm" />
+    <Content Include="Content\F_Organizer\Daily Alerts.htm" />
+    <Content Include="Content\F_Organizer\Entry Exit Dates.htm" />
+    <Content Include="Content\F_Organizer\Groups.htm" />
+    <Content Include="Content\F_Organizer\ORGANIZER.htm" />
+    <Content Include="Content\F_Organizer\Risk Per Trade.htm" />
+    <Content Include="Content\F_Organizer\Signals.htm" />
+    <Content Include="Content\F_Organizer\Signals\ADX_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Aroon_Down_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Aroon_Oscillator_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Aroon_Up_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Asset_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\ATRJWW_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\ATR_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\BB_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Beta_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\DI_Minus_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\DI_Plus_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Earnings_Day_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Earnings_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\EMA_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Gap_Down_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Gap_Up_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\High_Low_Band_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Implied_Volatility_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\IV_Rank_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\MACD_Histogram_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\MACD_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\New_High_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\New_Low_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Next_State_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\OHLC_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Open_Interest_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Option_Spread_Signals.htm" />
+    <Content Include="Content\F_Organizer\Signals\Option_Type_Signals.htm" />
+    <Content Include="Content\F_Organizer\Signals\Option_Volume_Signals.htm" />
+    <Content Include="Content\F_Organizer\Signals\Price_percentage_change_signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Price_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Put_Call_Ratio_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\RSI_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Seasonal_Price_Yearly_Signals.htm" />
+    <Content Include="Content\F_Organizer\Signals\Sectors_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\SMA_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Split_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\State_Model_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\State_Path_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\State_Targets_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Statistic_Volitality_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Stock_Volume_Signal.htm" />
+    <Content Include="Content\F_Organizer\Signals\Time_Stop_Signal.htm" />
+    <Content Include="Content\F_Organizer\Stock Lists.htm" />
+    <Content Include="Content\F_Organizer\Trade Rules.htm" />
+    <Content Include="Content\G_Brokerage\Account Summary.htm" />
+    <Content Include="Content\G_Brokerage\BROKERAGE.htm" />
+    <Content Include="Content\G_Brokerage\Create Order.htm" />
+    <Content Include="Content\G_Brokerage\Live Data.htm" />
+    <Content Include="Content\G_Brokerage\Orders.htm" />
+    <Content Include="Content\G_Brokerage\Positions.htm" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May8_1_8.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_10.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_11.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_12.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_13.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_14.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_15.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_16.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_17.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_1.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_10.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_10_771x295.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_11.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_11_779x127.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_12.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_13.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_13_769x88.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_13_880x102.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_14.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_14_780x150.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_15.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_15_908x336.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_16.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_16_902x419.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_17.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_18.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_2.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_3.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_4.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_5.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_6.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_7.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_8.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_8_791x369.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_1_9.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_2.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_3.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_4.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_5.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_6.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_7.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_8.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May8_9.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May9.jpg" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\1. Stocks Menu-May9_1.jpg" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\Compare.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\Compare_1.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\Compare_1_656x388.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\Compare_1_865x513.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\SD Stress Test.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\SD Stress Test_858x701.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\State Modeling.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\State Modeling_1.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\State Modeling_1_744x283.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\State Modeling_2.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\State Modeling_2_734x353.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\State Modeling_3.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\Steps to Save a Template.png" />
+    <Content Include="Content\Resources\Images\1. Stocks Menu-May9\Steps to Save a Template_1.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\2.Options.docx.jpg" />
+    <Content Include="Content\Resources\Images\2.Options.docx\2.Options.docx_1.jpg" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_1.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_10.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_10_582x248.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_11.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_11_588x254.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_12.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_12_624x216.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_1_25x19.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_2.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_2_479x146.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_3.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_4.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_4_75x16.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_5.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_576x90.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_6.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_624x99.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_688x108.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_7.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_7_624x267.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_8.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_8_624x266.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_9.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\OPTIONS_9_588x252.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Sentiment.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Sentiment_1.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Sentiment_1_624x182.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Sentiment_2.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Sentiment_2_624x273.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Sentiment_3.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Sentiment_3_624x274.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Sentiment_624x83.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Unusual Option.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Unusual Option_1.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Unusual Option_1_588x222.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Unusual Option_2.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Unusual Option_2_583x220.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Unusual Option_624x75.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Unusual Option_638x75.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Volatility.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Volatility_1.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Volatility_1_624x234.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Volatility_2.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Volatility_2_624x234.png" />
+    <Content Include="Content\Resources\Images\2.Options.docx\Volatility_624x74.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\Calendar.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\Calendar_1.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\Calendar_2.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\Calendar_3.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_1.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_10.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_10_624x201.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_11.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_11_624x200.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_12.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_12_624x198.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_13.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_13_624x199.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_14.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_14_624x197.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_2.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_3.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_4.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_4_27x27.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_5.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_6.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_6_624x201.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_7.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_7_624x201.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_8.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_8_624x200.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_9.png" />
+    <Content Include="Content\Resources\Images\3.Earnings-Josh and Mike\EARNINGS_9_624x202.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\BACKTEST.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\BACKTEST_1.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\BACKTEST_2.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\BACKTEST_3.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\BACKTEST_4.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\BACKTEST_5.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\BACKTEST_6.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\BACKTEST_7.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_1.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_10.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_11.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_12.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_13.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_14.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_15.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_15_29x19.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_16.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_16_23x25.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_17.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_17_25x21.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_18.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_18_657x108.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_19.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_1_555x65.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_2.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_20.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_20_567x254.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_21.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_21_566x234.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_22.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_22_566x223.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_23.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_24.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_25.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_26.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_27.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_28.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_29.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_2_654x115.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_3.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_30.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_31.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_4.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_4_658x142.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_5.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_5_17x18.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_6.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_6_81x17.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_7.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_7_555x156.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_8.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_8_125x16.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_9.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Groups_9_483x153.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Quick BackTest Panel.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Quick BackTest Panel_1.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Quick BackTest Panel_2.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Quick BackTest Panel_3.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Quick BackTest Panel_4.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Quick BackTest Panel_5.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh1\Quick BackTest Panel_6.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\BACKTEST.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\BACKTEST_1.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\BACKTEST_1_624x232.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\BACKTEST_2.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\BACKTEST_3.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\BACKTEST_3_573x245.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\BACKTEST_4.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\BACKTEST_4_623x257.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\BACKTEST_5.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\BACKTEST_5_624x267.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\BACKTEST_6.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\BACKTEST_625x106.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\BACKTEST_7.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_1.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_10.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_11.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_12.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_13.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_13_624x145.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_14.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_15.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_16.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_17.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_18.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_19.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_2.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_20.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_21.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_22.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_23.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_23_624x108.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_24.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_24_624x232.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_25.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_26.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_27.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_28.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_29.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_3.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_30.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_31.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_4.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_5.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_6.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_625x128.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_7.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_8.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Groups_9.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Quick BackTest Panel.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Quick BackTest Panel_1.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Quick BackTest Panel_2.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Quick BackTest Panel_2_624x174.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Quick BackTest Panel_3.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Quick BackTest Panel_4.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Quick BackTest Panel_4_624x254.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Quick BackTest Panel_5.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Quick BackTest Panel_624x172.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Wizards.png" />
+    <Content Include="Content\Resources\Images\4.BackTest _Mike and Josh\Wizards_625x246.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\7. Brokerage.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\7. Brokerage_1.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\7. Brokerage_2.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\7. Brokerage_2_147x20.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\7. Brokerage_3.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\7. Brokerage_3_122x19.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\7. Brokerage_4.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\7. Brokerage_5.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\7. Brokerage_5_624x269.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\7. Brokerage_6.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\7. Brokerage_7.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\BROKERAGE LINKS MENU.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\BROKERAGE LINKS MENU_624x39.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\Create Order.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\Live Data.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\Live Data_624x502.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\Orders.png" />
+    <Content Include="Content\Resources\Images\7. Brokerage\Orders_624x205.png" />
+    <Content Include="Content\Resources\Images\addcapplanbutton.png" />
+    <Content Include="Content\Resources\Images\addmoredates.png" />
+    <Content Include="Content\Resources\Images\addmoredates_97x19.png" />
+    <Content Include="Content\Resources\Images\addmoretradesbutton.png" />
+    <Content Include="Content\Resources\Images\ADX_Consecutive.png" />
+    <Content Include="Content\Resources\Images\ADX_Signal.png" />
+    <Content Include="Content\Resources\Images\ADX_trend.png" />
+    <Content Include="Content\Resources\Images\Aroondown1.png" />
+    <Content Include="Content\Resources\Images\Aroondown2.png" />
+    <Content Include="Content\Resources\Images\Aroondown3.png" />
+    <Content Include="Content\Resources\Images\Aroonosc1.png" />
+    <Content Include="Content\Resources\Images\aroonosc2.png" />
+    <Content Include="Content\Resources\Images\Aroonosc3.png" />
+    <Content Include="Content\Resources\Images\Aroonup1.png" />
+    <Content Include="Content\Resources\Images\Aroonup2.png" />
+    <Content Include="Content\Resources\Images\Aroonup3.png" />
+    <Content Include="Content\Resources\Images\AssetSignal.png" />
+    <Content Include="Content\Resources\Images\ATRJWWSignal.png" />
+    <Content Include="Content\Resources\Images\ATRSignal.png" />
+    <Content Include="Content\Resources\Images\ATRSignal_228x213.png" />
+    <Content Include="Content\Resources\Images\backtest-traderules.png" />
+    <Content Include="Content\Resources\Images\backtest-traderules_1017x405.png" />
+    <Content Include="Content\Resources\Images\backtestbuttonarrow.jpg" />
+    <Content Include="Content\Resources\Images\backtestbuttonarrow_64x25.jpg" />
+    <Content Include="Content\Resources\Images\backtestbuttonarrow_67x25.jpg" />
+    <Content Include="Content\Resources\Images\backtestbuttonarrow_68x26.jpg" />
+    <Content Include="Content\Resources\Images\backtestbuttonarrow_70x27.jpg" />
+    <Content Include="Content\Resources\Images\backtestbuttonarrow_71x27.jpg" />
+    <Content Include="Content\Resources\Images\backtestbuttonarrow_76x29.jpg" />
+    <Content Include="Content\Resources\Images\backtestbuttonarrow_77x30.jpg" />
+    <Content Include="Content\Resources\Images\backtestbuttonarrow_81x31.jpg" />
+    <Content Include="Content\Resources\Images\backtestedrules.png" />
+    <Content Include="Content\Resources\Images\BackTesticon.jpg" />
+    <Content Include="Content\Resources\Images\BackTesticon_100x100.png" />
+    <Content Include="Content\Resources\Images\Backtestmenu.jpg" />
+    <Content Include="Content\Resources\Images\backtestquicklinkicon.png" />
+    <Content Include="Content\Resources\Images\backtestquicklinkicon_40x37.png" />
+    <Content Include="Content\Resources\Images\backtestresultql.jpg" />
+    <Content Include="Content\Resources\Images\backtestresultquicklink.png" />
+    <Content Include="Content\Resources\Images\Backtestthumbnail.jpg" />
+    <Content Include="Content\Resources\Images\Backtestthumbnail_thumb_20_20.jpg" />
+    <Content Include="Content\Resources\Images\BB_BB.png" />
+    <Content Include="Content\Resources\Images\BB_OHLC_Signal.png" />
+    <Content Include="Content\Resources\Images\Beta_Signal.png" />
+    <Content Include="Content\Resources\Images\brokerage-closed.png" />
+    <Content Include="Content\Resources\Images\Brokerage-linkaccount.png" />
+    <Content Include="Content\Resources\Images\Brokerage-linkaccount_875x181.png" />
+    <Content Include="Content\Resources\Images\brokerage-marketquotes.png" />
+    <Content Include="Content\Resources\Images\Brokerage-openposition.png" />
+    <Content Include="Content\Resources\Images\Brokerage1.png" />
+    <Content Include="Content\Resources\Images\Brokerage2.png" />
+    <Content Include="Content\Resources\Images\brokerage3.png" />
+    <Content Include="Content\Resources\Images\Brokeragemenu.jpg" />
+    <Content Include="Content\Resources\Images\Brokeragemenuthumbnail.jpg" />
+    <Content Include="Content\Resources\Images\Brokeragemenuthumbnail_thumb_20_20.jpg" />
+    <Content Include="Content\Resources\Images\brokeragequicklinkicon.png" />
+    <Content Include="Content\Resources\Images\Bullet1.png" />
+    <Content Include="Content\Resources\Images\Bullet1Light.png" />
+    <Content Include="Content\Resources\Images\Bullet1Lightold.png" />
+    <Content Include="Content\Resources\Images\Bullet2.png" />
+    <Content Include="Content\Resources\Images\Bullet2Light.png" />
+    <Content Include="Content\Resources\Images\BulletWhite.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_1.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_10.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_10_624x226.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_11.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_11_22x22.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_11_25x25.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_12.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_12_749x236.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_13.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_13_624x254.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_14.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_14_857x320.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_15.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_15_624x258.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_16.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_16_820x304.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_17.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_17_623x205.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_18.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_18_421x128.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_19.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_2.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_20.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_20_14x19.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_21.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_21_417x65.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_22.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_22_745x275.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_3.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_4.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_5.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_6.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_7.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_8.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_9.png" />
+    <Content Include="Content\Resources\Images\Buy Sell Criteria\Buy Sell Criteria_9_702x225.png" />
+    <Content Include="Content\Resources\Images\buysell1.png" />
+    <Content Include="Content\Resources\Images\buysell1_860x320.png" />
+    <Content Include="Content\Resources\Images\buysell2.png" />
+    <Content Include="Content\Resources\Images\buysell2_1021x252.png" />
+    <Content Include="Content\Resources\Images\buysell3.png" />
+    <Content Include="Content\Resources\Images\buysell3_895x244.png" />
+    <Content Include="Content\Resources\Images\calendar.png" />
+    <Content Include="Content\Resources\Images\Cancelorder.png" />
+    <Content Include="Content\Resources\Images\cancelorderbutton.png" />
+    <Content Include="Content\Resources\Images\cancelorderconfirm.png" />
+    <Content Include="Content\Resources\Images\cancelorderconfirm_503x175.png" />
+    <Content Include="Content\Resources\Images\Capture.png" />
+    <Content Include="Content\Resources\Images\Capture1.png" />
+    <Content Include="Content\Resources\Images\Capture2.png" />
+    <Content Include="Content\Resources\Images\Capture3.png" />
+    <Content Include="Content\Resources\Images\Charts.png" />
+    <Content Include="Content\Resources\Images\chartsabove.png" />
+    <Content Include="Content\Resources\Images\chartsabove3.png" />
+    <Content Include="Content\Resources\Images\chartsabove3_766x264.png" />
+    <Content Include="Content\Resources\Images\chartsfilled.png" />
+    <Content Include="Content\Resources\Images\chartsfilled_851x184.png" />
+    <Content Include="Content\Resources\Images\chartsload.png" />
+    <Content Include="Content\Resources\Images\chartsresult.png" />
+    <Content Include="Content\Resources\Images\chartsresultabove.png" />
+    <Content Include="Content\Resources\Images\chartsresultabove1.png" />
+    <Content Include="Content\Resources\Images\chartsresultabove1_856x429.png" />
+    <Content Include="Content\Resources\Images\chartsresultabove1_885x443.png" />
+    <Content Include="Content\Resources\Images\ClosedBook.png" />
+    <Content Include="Content\Resources\Images\comparebutton.png" />
+    <Content Include="Content\Resources\Images\comparebutton_63x22.png" />
+    <Content Include="Content\Resources\Images\ContactIcon.png" />
+    <Content Include="Content\Resources\Images\cp-create.png" />
+    <Content Include="Content\Resources\Images\cp-create1.png" />
+    <Content Include="Content\Resources\Images\cp1.png" />
+    <Content Include="Content\Resources\Images\cp2.png" />
+    <Content Include="Content\Resources\Images\cp2_516x301.png" />
+    <Content Include="Content\Resources\Images\createbutton.png" />
+    <Content Include="Content\Resources\Images\Createorder1.png" />
+    <Content Include="Content\Resources\Images\Createorder1_1002x222.png" />
+    <Content Include="Content\Resources\Images\createorder2.png" />
+    <Content Include="Content\Resources\Images\createorder2_918x233.png" />
+    <Content Include="Content\Resources\Images\createorder3.png" />
+    <Content Include="Content\Resources\Images\createorder3_827x326.png" />
+    <Content Include="Content\Resources\Images\createorder4.png" />
+    <Content Include="Content\Resources\Images\createorder4_879x382.png" />
+    <Content Include="Content\Resources\Images\createorder5.png" />
+    <Content Include="Content\Resources\Images\createorder5_930x448.png" />
+    <Content Include="Content\Resources\Images\createorder6.png" />
+    <Content Include="Content\Resources\Images\createorder6_744x360.png" />
+    <Content Include="Content\Resources\Images\createordersuccess.png" />
+    <Content Include="Content\Resources\Images\createquicklinkmenu.jpg" />
+    <Content Include="Content\Resources\Images\DashboardIntrotopic.png" />
+    <Content Include="Content\Resources\Images\DashboardIntrotopic_753x203.png" />
+    <Content Include="Content\Resources\Images\datequicklinkicon.png" />
+    <Content Include="Content\Resources\Images\DelphianLogo.png" />
+    <Content Include="Content\Resources\Images\DI_Consecutive_Minus.png" />
+    <Content Include="Content\Resources\Images\DI_Consecutive_Plus.png" />
+    <Content Include="Content\Resources\Images\DI_Current_Minus.png" />
+    <Content Include="Content\Resources\Images\DI_Current_Plus.png" />
+    <Content Include="Content\Resources\Images\DI_Trend_Minus.png" />
+    <Content Include="Content\Resources\Images\DI_Trend_Plus.jpg" />
+    <Content Include="Content\Resources\Images\Documentation.png" />
+    <Content Include="Content\Resources\Images\DownloadIcon.png" />
+    <Content Include="Content\Resources\Images\DropDownClosed.png" />
+    <Content Include="Content\Resources\Images\DropDownClosedSecondLevel.png" />
+    <Content Include="Content\Resources\Images\DropDownClosedSecondLevel_old.png" />
+    <Content Include="Content\Resources\Images\DropDownClosed_final.png" />
+    <Content Include="Content\Resources\Images\DropDownOpen.png" />
+    <Content Include="Content\Resources\Images\DropDownOpenSecondLevel.png" />
+    <Content Include="Content\Resources\Images\DropDownOpenSecondLevel_old.png" />
+    <Content Include="Content\Resources\Images\DropDownOpen_final.png" />
+    <Content Include="Content\Resources\Images\DropDownSmallClosed.png" />
+    <Content Include="Content\Resources\Images\DropDownSmallClosed_old.png" />
+    <Content Include="Content\Resources\Images\DropDownSmallOpen.png" />
+    <Content Include="Content\Resources\Images\DropDownSmallOpen_old.png" />
+    <Content Include="Content\Resources\Images\EARNINGS.png" />
+    <Content Include="Content\Resources\Images\EarningsCalendar.png" />
+    <Content Include="Content\Resources\Images\EarningsCalendar1.png" />
+    <Content Include="Content\Resources\Images\EarningsCalendar1_1115x311.png" />
+    <Content Include="Content\Resources\Images\EarningsCalendar_1102x418.png" />
+    <Content Include="Content\Resources\Images\EarningsDaySignal.png" />
+    <Content Include="Content\Resources\Images\Earningserror.png" />
+    <Content Include="Content\Resources\Images\Earningsmenu.jpg" />
+    <Content Include="Content\Resources\Images\Earningsmenuthumbnail.jpg" />
+    <Content Include="Content\Resources\Images\Earningsmenuthumbnail_thumb_20_20.jpg" />
+    <Content Include="Content\Resources\Images\EarningsPlan.png" />
+    <Content Include="Content\Resources\Images\EarningsPlan1.png" />
+    <Content Include="Content\Resources\Images\EarningsPlan1_920x251.png" />
+    <Content Include="Content\Resources\Images\EarningsPlan_884x156.png" />
+    <Content Include="Content\Resources\Images\EarningsSignal1.png" />
+    <Content Include="Content\Resources\Images\EarningsSignal2.png" />
+    <Content Include="Content\Resources\Images\EarningsWizard1.png" />
+    <Content Include="Content\Resources\Images\EarningsWizard1_656x284.png" />
+    <Content Include="Content\Resources\Images\EarningsWizard2.jpg" />
+    <Content Include="Content\Resources\Images\EarningsWizard2_586x167.jpg" />
+    <Content Include="Content\Resources\Images\EarningsWizard3.jpg" />
+    <Content Include="Content\Resources\Images\EarningsWizard3_755x317.jpg" />
+    <Content Include="Content\Resources\Images\EarningsWizard4.jpg" />
+    <Content Include="Content\Resources\Images\EarningsWizard4_735x185.jpg" />
+    <Content Include="Content\Resources\Images\editcancelledorder.png" />
+    <Content Include="Content\Resources\Images\EMASignal1.png" />
+    <Content Include="Content\Resources\Images\EMASignal1_250x358.png" />
+    <Content Include="Content\Resources\Images\EMASignal2.png" />
+    <Content Include="Content\Resources\Images\EMASignal3.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_1.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_10.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_11.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_11_366x134.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_12.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_12_299x42.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_13.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_14.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_14_119x25.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_15.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_16.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_17.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_18.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_19.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_1_25x21.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_2.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_20.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_20_22x22.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_20_25x25.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_21.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_22.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_23.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_24.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_25.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_26.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_27.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_3.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_4.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_5.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_6.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_7.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_8.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Entry Exit Dates_9.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_1.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_10.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_11.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_11_624x238.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_1_446x161.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_2.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_2_489x176.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_3.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_3_133x21.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_4.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_4_370x219.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_5.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_6.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_6_624x220.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_7.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_7_359x338.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_8.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_8_624x131.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_9.png" />
+    <Content Include="Content\Resources\Images\Entry Exit Dates\Signals_9_624x243.png" />
+    <Content Include="Content\Resources\Images\entryexit-calendar.png" />
+    <Content Include="Content\Resources\Images\entryexit-calendar1.png" />
+    <Content Include="Content\Resources\Images\entryexit-calendar1_880x383.png" />
+    <Content Include="Content\Resources\Images\entryexit-calendar2.png" />
+    <Content Include="Content\Resources\Images\entryexit-calendar2_993x400.png" />
+    <Content Include="Content\Resources\Images\entryexit-calendar_961x396.png" />
+    <Content Include="Content\Resources\Images\entryexit-ivrank.png" />
+    <Content Include="Content\Resources\Images\entryexit-ivrank1.png" />
+    <Content Include="Content\Resources\Images\entryexit-ivrank1_935x429.png" />
+    <Content Include="Content\Resources\Images\entryexit-ivrank_1013x405.png" />
+    <Content Include="Content\Resources\Images\entryexit-signal1.png" />
+    <Content Include="Content\Resources\Images\entryexit-signal1_1082x360.png" />
+    <Content Include="Content\Resources\Images\entryexit-signal2.png" />
+    <Content Include="Content\Resources\Images\entryexit-signal2_1045x411.png" />
+    <Content Include="Content\Resources\Images\entryexit-signal3.png" />
+    <Content Include="Content\Resources\Images\entryexit-signal3_1026x427.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates-criteria.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates-criteria_910x218.png" />
+    <Content Include="Content\Resources\Images\entryexitdates-earnings.png" />
+    <Content Include="Content\Resources\Images\entryexitdates-earnings1.png" />
+    <Content Include="Content\Resources\Images\entryexitdates-earnings1_971x363.png" />
+    <Content Include="Content\Resources\Images\entryexitdates-earnings_830x386.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates-ivrank.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates-ivrank_936x378.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates-manual.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates-manual_839x438.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates-sm.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates-sm1.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates-sm1_1046x345.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates-sm2.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates-sm2_1026x444.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates-sm_1018x340.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates1.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates1_804x410.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates2.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates2_476x343.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates3.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates3_684x350.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates4.png" />
+    <Content Include="Content\Resources\Images\EntryExitDates4_856x386.png" />
+    <Content Include="Content\Resources\Images\excelicon.png" />
+    <Content Include="Content\Resources\Images\excelicon_30x30.png" />
+    <Content Include="Content\Resources\Images\executebutton.png" />
+    <Content Include="Content\Resources\Images\executebutton_59x19.png" />
+    <Content Include="Content\Resources\Images\expanddashboard.png" />
+    <Content Include="Content\Resources\Images\expanddashboard_thumb_20_20.png" />
+    <Content Include="Content\Resources\Images\Facebook.png" />
+    <Content Include="Content\Resources\Images\Gapdown1.png" />
+    <Content Include="Content\Resources\Images\Gapdown2.png" />
+    <Content Include="Content\Resources\Images\Gapup1.png" />
+    <Content Include="Content\Resources\Images\Gapup2.png" />
+    <Content Include="Content\Resources\Images\GettingStartedicon.png" />
+    <Content Include="Content\Resources\Images\GettingStartedicon_100x100.png" />
+    <Content Include="Content\Resources\Images\GreenCheck.png" />
+    <Content Include="Content\Resources\Images\groups1.png" />
+    <Content Include="Content\Resources\Images\groups1_1033x249.png" />
+    <Content Include="Content\Resources\Images\groups2.png" />
+    <Content Include="Content\Resources\Images\groups3.png" />
+    <Content Include="Content\Resources\Images\groups4.png" />
+    <Content Include="Content\Resources\Images\groups4_1091x213.png" />
+    <Content Include="Content\Resources\Images\groups5.png" />
+    <Content Include="Content\Resources\Images\groups5_1049x403.png" />
+    <Content Include="Content\Resources\Images\Groups\Backtested Rules.png" />
+    <Content Include="Content\Resources\Images\Groups\Backtested Rules_1.png" />
+    <Content Include="Content\Resources\Images\Groups\Backtested Rules_2.png" />
+    <Content Include="Content\Resources\Images\Groups\Backtested Rules_3.png" />
+    <Content Include="Content\Resources\Images\Groups\Backtested Rules_4.png" />
+    <Content Include="Content\Resources\Images\Groups\Backtested Rules_5.png" />
+    <Content Include="Content\Resources\Images\Groups\Backtested Rules_5_624x240.png" />
+    <Content Include="Content\Resources\Images\Groups\Backtested Rules_6.png" />
+    <Content Include="Content\Resources\Images\Groups\Capital Plan.png" />
+    <Content Include="Content\Resources\Images\Groups\Capital Plan_1.png" />
+    <Content Include="Content\Resources\Images\Groups\Capital Plan_2.png" />
+    <Content Include="Content\Resources\Images\Groups\Capital Plan_2_62x19.png" />
+    <Content Include="Content\Resources\Images\Groups\Capital Plan_2_65x20.png" />
+    <Content Include="Content\Resources\Images\Groups\Capital Plan_3.png" />
+    <Content Include="Content\Resources\Images\Groups\Capital Plan_4.png" />
+    <Content Include="Content\Resources\Images\Groups\Groups.png" />
+    <Content Include="Content\Resources\Images\Groups\groups1.png" />
+    <Content Include="Content\Resources\Images\Groups\Groups_1.png" />
+    <Content Include="Content\Resources\Images\Groups\Groups_2.png" />
+    <Content Include="Content\Resources\Images\Groups\Groups_2_25x21.png" />
+    <Content Include="Content\Resources\Images\Groups\Groups_3.png" />
+    <Content Include="Content\Resources\Images\Groups\Groups_4.png" />
+    <Content Include="Content\Resources\Images\Groups\Groups_5.png" />
+    <Content Include="Content\Resources\Images\Groups\Groups_6.png" />
+    <Content Include="Content\Resources\Images\Groups\Groups_7.png" />
+    <Content Include="Content\Resources\Images\helpfilesquicklinks.png" />
+    <Content Include="Content\Resources\Images\High_Low_Band_Signal.png" />
+    <Content Include="Content\Resources\Images\Image.png" />
+    <Content Include="Content\Resources\Images\ImpliedVolatility1.png" />
+    <Content Include="Content\Resources\Images\ImpliedVolatility2.png" />
+    <Content Include="Content\Resources\Images\ImportWizard1.png" />
+    <Content Include="Content\Resources\Images\ImportWizard1_387x232.png" />
+    <Content Include="Content\Resources\Images\ImportWizard2.png" />
+    <Content Include="Content\Resources\Images\ImportWizard2_671x221.png" />
+    <Content Include="Content\Resources\Images\ImportWizard3.png" />
+    <Content Include="Content\Resources\Images\ImportWizard3_597x236.png" />
+    <Content Include="Content\Resources\Images\ImportWizard4.png" />
+    <Content Include="Content\Resources\Images\ImportWizard4_675x292.png" />
+    <Content Include="Content\Resources\Images\ImportWizard5.png" />
+    <Content Include="Content\Resources\Images\ImportWizard5_735x144.png" />
+    <Content Include="Content\Resources\Images\InfoIcon.png" />
+    <Content Include="Content\Resources\Images\IVRankerWizard1.jpg" />
+    <Content Include="Content\Resources\Images\IVRankerWizard1_721x233.jpg" />
+    <Content Include="Content\Resources\Images\IVRankerWizard2.jpg" />
+    <Content Include="Content\Resources\Images\IVRankerWizard2_788x428.jpg" />
+    <Content Include="Content\Resources\Images\IVRankerWizard3.jpg" />
+    <Content Include="Content\Resources\Images\IVRankerWizard3_912x352.jpg" />
+    <Content Include="Content\Resources\Images\IVRankerWizard4.png" />
+    <Content Include="Content\Resources\Images\IVRankerWizard4_911x278.png" />
+    <Content Include="Content\Resources\Images\IVRankSignal1.png" />
+    <Content Include="Content\Resources\Images\IVRankSignal2.png" />
+    <Content Include="Content\Resources\Images\IVRankSignal3.png" />
+    <Content Include="Content\Resources\Images\IVRankSignal4.png" />
+    <Content Include="Content\Resources\Images\IVRankSignal5.png" />
+    <Content Include="Content\Resources\Images\ListIcon.png" />
+    <Content Include="Content\Resources\Images\ListIconWhite.png" />
+    <Content Include="Content\Resources\Images\logout.png" />
+    <Content Include="Content\Resources\Images\MACDH_Consecutive.png" />
+    <Content Include="Content\Resources\Images\MACDH_Current.png" />
+    <Content Include="Content\Resources\Images\MACDH_Trend.png" />
+    <Content Include="Content\Resources\Images\MACD_Consecutive.png" />
+    <Content Include="Content\Resources\Images\MACD_Current.png" />
+    <Content Include="Content\Resources\Images\MACD_Trend.png" />
+    <Content Include="Content\Resources\Images\MainMenu.jpg" />
+    <Content Include="Content\Resources\Images\ManualWizard1.png" />
+    <Content Include="Content\Resources\Images\ManualWizard1_768x337.png" />
+    <Content Include="Content\Resources\Images\ManualWizard2.png" />
+    <Content Include="Content\Resources\Images\ManualWizard3.png" />
+    <Content Include="Content\Resources\Images\ManualWizard3_713x330.png" />
+    <Content Include="Content\Resources\Images\ManualWizard4.png" />
+    <Content Include="Content\Resources\Images\ManualWizard4_778x155.png" />
+    <Content Include="Content\Resources\Images\Masterpagebottombar.png" />
+    <Content Include="Content\Resources\Images\MonthlyWizard1.jpg" />
+    <Content Include="Content\Resources\Images\MonthlyWizard1_1026x355.jpg" />
+    <Content Include="Content\Resources\Images\MonthlyWizard2.jpg" />
+    <Content Include="Content\Resources\Images\MonthlyWizard2_766x383.jpg" />
+    <Content Include="Content\Resources\Images\MonthlyWizard3.jpg" />
+    <Content Include="Content\Resources\Images\MonthlyWizard3_705x315.jpg" />
+    <Content Include="Content\Resources\Images\MonthlyWizard4.jpg" />
+    <Content Include="Content\Resources\Images\MonthlyWizard4_757x160.jpg" />
+    <Content Include="Content\Resources\Images\MonthlyWizard5.jpg" />
+    <Content Include="Content\Resources\Images\MonthlyWizard5_797x346.jpg" />
+    <Content Include="Content\Resources\Images\NewHighSignal.png" />
+    <Content Include="Content\Resources\Images\NewLowSignal.png" />
+    <Content Include="Content\Resources\Images\nextbutton.jpg" />
+    <Content Include="Content\Resources\Images\nextbutton_44x25.jpg" />
+    <Content Include="Content\Resources\Images\nextbutton_45x26.jpg" />
+    <Content Include="Content\Resources\Images\nextbutton_46x26.jpg" />
+    <Content Include="Content\Resources\Images\nextbutton_48x27.jpg" />
+    <Content Include="Content\Resources\Images\nextbutton_48x28.jpg" />
+    <Content Include="Content\Resources\Images\nextbutton_49x28.jpg" />
+    <Content Include="Content\Resources\Images\nextbutton_50x29.jpg" />
+    <Content Include="Content\Resources\Images\nextbutton_51x29.jpg" />
+    <Content Include="Content\Resources\Images\nextbutton_52x30.jpg" />
+    <Content Include="Content\Resources\Images\nextbutton_53x31.jpg" />
+    <Content Include="Content\Resources\Images\nextbutton_54x31.jpg" />
+    <Content Include="Content\Resources\Images\nextbutton_55x30.jpg" />
+    <Content Include="Content\Resources\Images\nextbutton_58x33.jpg" />
+    <Content Include="Content\Resources\Images\Next_State_Signal.png" />
+    <Content Include="Content\Resources\Images\NoteIcon.png" />
+    <Content Include="Content\Resources\Images\NoteIcon_old.png" />
+    <Content Include="Content\Resources\Images\OHLCSignal.png" />
+    <Content Include="Content\Resources\Images\OpenBookIcon.png" />
+    <Content Include="Content\Resources\Images\OpenInterestSignal1.png" />
+    <Content Include="Content\Resources\Images\OpenInterestSignal2.png" />
+    <Content Include="Content\Resources\Images\OpenInterestSignal3.png" />
+    <Content Include="Content\Resources\Images\OptionsMenu.jpg" />
+    <Content Include="Content\Resources\Images\Optionsmenuthumbnail.jpg" />
+    <Content Include="Content\Resources\Images\Optionsmenuthumbnail_thumb_20_20.jpg" />
+    <Content Include="Content\Resources\Images\OptionSpreadSignal.png" />
+    <Content Include="Content\Resources\Images\OptionTypeSignal.png" />
+    <Content Include="Content\Resources\Images\OptionVolumeSignal1.png" />
+    <Content Include="Content\Resources\Images\OptionVolumeSignal2.png" />
+    <Content Include="Content\Resources\Images\OptionVolumeSignal3.png" />
+    <Content Include="Content\Resources\Images\OrderId.png" />
+    <Content Include="Content\Resources\Images\OrderId_604x169.png" />
+    <Content Include="Content\Resources\Images\Ordersedits.png" />
+    <Content Include="Content\Resources\Images\Ordersedits_646x218.png" />
+    <Content Include="Content\Resources\Images\Organizermenu.jpg" />
+    <Content Include="Content\Resources\Images\Organizermenuthumnail.jpg" />
+    <Content Include="Content\Resources\Images\Organizermenuthumnail_thumb_20_20.jpg" />
+    <Content Include="Content\Resources\Images\planbutton.png" />
+    <Content Include="Content\Resources\Images\positionclosebutton.png" />
+    <Content Include="Content\Resources\Images\positionseditbutton.png" />
+    <Content Include="Content\Resources\Images\positionslink.png" />
+    <Content Include="Content\Resources\Images\positionspending.png" />
+    <Content Include="Content\Resources\Images\previewbutton.png" />
+    <Content Include="Content\Resources\Images\pricepercchange.png" />
+    <Content Include="Content\Resources\Images\PriceSignal1.png" />
+    <Content Include="Content\Resources\Images\PriceSignal2.png" />
+    <Content Include="Content\Resources\Images\PriceSignal3.png" />
+    <Content Include="Content\Resources\Images\PutCallSignal1.png" />
+    <Content Include="Content\Resources\Images\PutCallSignal2.png" />
+    <Content Include="Content\Resources\Images\PutCallSignal3.png" />
+    <Content Include="Content\Resources\Images\QuotationMark.png" />
+    <Content Include="Content\Resources\Images\RedX.png" />
+    <Content Include="Content\Resources\Images\reset.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade_1.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade_2.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade_2_624x167.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade_3.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade_3_45x22.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade_4.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade_5.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade_5_789x184.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade_6.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade_624x136.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade_7.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade_7_652x183.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade_8.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade_8_624x159.png" />
+    <Content Include="Content\Resources\Images\RiskPerTrade\Risk Per Trade_9.png" />
+    <Content Include="Content\Resources\Images\RSISignal.png" />
+    <Content Include="Content\Resources\Images\SaveButton.png" />
+    <Content Include="Content\Resources\Images\screener1.png" />
+    <Content Include="Content\Resources\Images\screener1_200x250.png" />
+    <Content Include="Content\Resources\Images\screener1_544x322.png" />
+    <Content Include="Content\Resources\Images\screenerquicklinkicon.jpg" />
+    <Content Include="Content\Resources\Images\Screenerresult.png" />
+    <Content Include="Content\Resources\Images\Screenerresult1.png" />
+    <Content Include="Content\Resources\Images\Screenerresult1_1018x381.png" />
+    <Content Include="Content\Resources\Images\Screenerresult1_1018x381_928x347.png" />
+    <Content Include="Content\Resources\Images\Screenerresult_1074x334.png" />
+    <Content Include="Content\Resources\Images\Screenerresult_1074x334_930x288.png" />
+    <Content Include="Content\Resources\Images\Seasonal_signal.jpg" />
+    <Content Include="Content\Resources\Images\Seasonal_signal_433x301.jpg" />
+    <Content Include="Content\Resources\Images\SectorsSignal.png" />
+    <Content Include="Content\Resources\Images\signalquicklinkicon.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_1.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_10.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_11.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_12.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_13.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_14.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_15.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_16.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_17.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_18.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_19.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_2.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_20.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_21.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_22.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_23.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_24.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_3.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_4.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_5.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_6.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_7.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_8.png" />
+    <Content Include="Content\Resources\Images\Signals\ATRJWW_9.png" />
+    <Content Include="Content\Resources\Images\Signals\Implied Volatility.png" />
+    <Content Include="Content\Resources\Images\Signals\Implied Volatility_1.png" />
+    <Content Include="Content\Resources\Images\Signals\Implied Volatility_2.png" />
+    <Content Include="Content\Resources\Images\Signals\PriceChange_signal.png" />
+    <Content Include="Content\Resources\Images\Signals\Price_Signal.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_1.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_10.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_11.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_11_940x365.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_11_955x371.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_12.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_13.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_14.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_15.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_16.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_17.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_18.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_19.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_2.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_20.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_21.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_22.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_23.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_24.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_25.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_26.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_2_747x135.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_3.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_4.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_4_786x254.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_5.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_5_685x206.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_5_731x220.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_6.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_7.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_751x254.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_8.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_846x286.png" />
+    <Content Include="Content\Resources\Images\Signals\Signals_9.png" />
+    <Content Include="Content\Resources\Images\Signals\SMA.png" />
+    <Content Include="Content\Resources\Images\Signals\SMA_1.png" />
+    <Content Include="Content\Resources\Images\Signals\Stock Volume.png" />
+    <Content Include="Content\Resources\Images\Signals\Stock Volume_1.png" />
+    <Content Include="Content\Resources\Images\Signals\Stock Volume_10.png" />
+    <Content Include="Content\Resources\Images\Signals\Stock Volume_2.png" />
+    <Content Include="Content\Resources\Images\Signals\Stock Volume_3.png" />
+    <Content Include="Content\Resources\Images\Signals\Stock Volume_4.png" />
+    <Content Include="Content\Resources\Images\Signals\Stock Volume_5.png" />
+    <Content Include="Content\Resources\Images\Signals\Stock Volume_6.png" />
+    <Content Include="Content\Resources\Images\Signals\Stock Volume_7.png" />
+    <Content Include="Content\Resources\Images\Signals\Stock Volume_8.png" />
+    <Content Include="Content\Resources\Images\Signals\Stock Volume_9.png" />
+    <Content Include="Content\Resources\Images\Signals_11.png" />
+    <Content Include="Content\Resources\Images\Signals_11_1264x562.png" />
+    <Content Include="Content\Resources\Images\Signals_20.png" />
+    <Content Include="Content\Resources\Images\SignalWizard1.jpg" />
+    <Content Include="Content\Resources\Images\SignalWizard1.png" />
+    <Content Include="Content\Resources\Images\SignalWizard1_862x395.png" />
+    <Content Include="Content\Resources\Images\SignalWizard2.png" />
+    <Content Include="Content\Resources\Images\SignalWizard2_884x351.png" />
+    <Content Include="Content\Resources\Images\SignalWizard3.png" />
+    <Content Include="Content\Resources\Images\SignalWizard3_907x278.png" />
+    <Content Include="Content\Resources\Images\SignalWizard4.png" />
+    <Content Include="Content\Resources\Images\SignalWizard4_782x296.png" />
+    <Content Include="Content\Resources\Images\SignalWizard5.png" />
+    <Content Include="Content\Resources\Images\SignalWizard5_817x348.png" />
+    <Content Include="Content\Resources\Images\SignalWizard6.png" />
+    <Content Include="Content\Resources\Images\SignalWizard6_872x201.png" />
+    <Content Include="Content\Resources\Images\SMASignal1.png" />
+    <Content Include="Content\Resources\Images\SMASignal2.png" />
+    <Content Include="Content\Resources\Images\SMASignal3.png" />
+    <Content Include="Content\Resources\Images\Split_signal.png" />
+    <Content Include="Content\Resources\Images\stateanalysisbutoon.png" />
+    <Content Include="Content\Resources\Images\StateModelingicon.jpg" />
+    <Content Include="Content\Resources\Images\StateModelingicon_100x100.png" />
+    <Content Include="Content\Resources\Images\StateModelSignal.png" />
+    <Content Include="Content\Resources\Images\stateModelWizard1.jpg" />
+    <Content Include="Content\Resources\Images\stateModelWizard1_796x237.jpg" />
+    <Content Include="Content\Resources\Images\stateModelWizard2.jpg" />
+    <Content Include="Content\Resources\Images\stateModelWizard3.jpg" />
+    <Content Include="Content\Resources\Images\stateModelWizard3_869x259.jpg" />
+    <Content Include="Content\Resources\Images\stateModelWizard4.jpg" />
+    <Content Include="Content\Resources\Images\stateModelWizard4_898x210.jpg" />
+    <Content Include="Content\Resources\Images\State_Path_Signal.png" />
+    <Content Include="Content\Resources\Images\State_Target.png" />
+    <Content Include="Content\Resources\Images\Statistic_Volatility_Signal.png" />
+    <Content Include="Content\Resources\Images\Stock list result.png" />
+    <Content Include="Content\Resources\Images\Stock list result_1073x152.png" />
+    <Content Include="Content\Resources\Images\Stock Lists2.png" />
+    <Content Include="Content\Resources\Images\Stock Lists3.png" />
+    <Content Include="Content\Resources\Images\Stock Lists3_1078x491.png" />
+    <Content Include="Content\Resources\Images\Stock Lists4.png" />
+    <Content Include="Content\Resources\Images\Stock Lists4_1017x413.png" />
+    <Content Include="Content\Resources\Images\Stock Lists5.png" />
+    <Content Include="Content\Resources\Images\Stock Lists5_902x136.png" />
+    <Content Include="Content\Resources\Images\Stock Lists6.png" />
+    <Content Include="Content\Resources\Images\Stock Lists6_958x431.png" />
+    <Content Include="Content\Resources\Images\stock lists7.png" />
+    <Content Include="Content\Resources\Images\stock lists7_937x129.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Example 2 An existing Stock.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Example 2 An existing Stock_1.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Example 2 An existing Stock_2.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_1.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_10.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_11.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_11_862x309.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_12.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_12_731x240.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_13.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_14.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_14_36x23.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_15.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_15_50x18.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_16.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_16_61x25.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_17.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_17_50x19.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_18.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_19.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_2.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_3.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_3_773x322.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_4.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_5.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_5_767x355.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_6.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_625x191.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_7.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_8.png" />
+    <Content Include="Content\Resources\Images\Stock Lists\Stock Lists_9.png" />
+    <Content Include="Content\Resources\Images\Stock Lists_13.png" />
+    <Content Include="Content\Resources\Images\Stock Lists_13_1109x489.png" />
+    <Content Include="Content\Resources\Images\Stock Lists_18.png" />
+    <Content Include="Content\Resources\Images\Stock Lists_18_1049x461.png" />
+    <Content Include="Content\Resources\Images\StockList1.png" />
+    <Content Include="Content\Resources\Images\StockList1_902x268.png" />
+    <Content Include="Content\Resources\Images\StockMenu.jpg" />
+    <Content Include="Content\Resources\Images\stockmenuthumbnail.jpg" />
+    <Content Include="Content\Resources\Images\stockmenuthumbnail_22x17.jpg" />
+    <Content Include="Content\Resources\Images\stockoverview.png" />
+    <Content Include="Content\Resources\Images\Stocks-StateModelling.png" />
+    <Content Include="Content\Resources\Images\Stocks-StateModelling_556x146.png" />
+    <Content Include="Content\Resources\Images\stocksabove.png" />
+    <Content Include="Content\Resources\Images\StockVolume1.png" />
+    <Content Include="Content\Resources\Images\StockVolume2.png" />
+    <Content Include="Content\Resources\Images\StockVolume3.png" />
+    <Content Include="Content\Resources\Images\Stock_Overview.png" />
+    <Content Include="Content\Resources\Images\Stock_Overview_symbollist.png" />
+    <Content Include="Content\Resources\Images\Stock_Overview_symbollist_631x217.png" />
+    <Content Include="Content\Resources\Images\Stock_Overview_symbollist_653x225.png" />
+    <Content Include="Content\Resources\Images\Stock_Overview_TT.png" />
+    <Content Include="Content\Resources\Images\submitorder.png" />
+    <Content Include="Content\Resources\Images\TimeStop.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_1.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_10.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_10_427x207.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_11.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_11_518x33.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_12.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_13.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_14.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_14_624x130.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_15.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_16.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_17.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_18.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_19.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_1_20x18.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_2.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_20.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_21.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_22.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_23.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_24.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_25.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_26.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_27.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_28.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_2_47x20.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_3.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_3_39x22.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_4.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_4_43x21.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_5.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_6.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_7.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_7_430x153.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_8.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_9.png" />
+    <Content Include="Content\Resources\Images\Trade Rules\Trade Rules_9_518x391.png" />
+    <Content Include="Content\Resources\Images\traderules-adaptive.png" />
+    <Content Include="Content\Resources\Images\traderules-adaptive1.png" />
+    <Content Include="Content\Resources\Images\traderules-adaptive_1135x137.png" />
+    <Content Include="Content\Resources\Images\traderules-layered.png" />
+    <Content Include="Content\Resources\Images\traderules-longcall.jpg" />
+    <Content Include="Content\Resources\Images\traderules-longcall_1147x132.jpg" />
+    <Content Include="Content\Resources\Images\TradeRules-ssdelta.png" />
+    <Content Include="Content\Resources\Images\TradeRules-ssdelta_929x132.png" />
+    <Content Include="Content\Resources\Images\Traderules-ssexactpoints.png" />
+    <Content Include="Content\Resources\Images\traderules-ssmaxpoints.png" />
+    <Content Include="Content\Resources\Images\traderules-ssmaxpoints_1156x163.png" />
+    <Content Include="Content\Resources\Images\TradeRules-ssstrikeleg.png" />
+    <Content Include="Content\Resources\Images\TradeRules-ssstrikeleg_1172x161.png" />
+    <Content Include="Content\Resources\Images\traderules-stage1.png" />
+    <Content Include="Content\Resources\Images\traderules-stage1expand.png" />
+    <Content Include="Content\Resources\Images\traderules-stage1expand_1145x355.png" />
+    <Content Include="Content\Resources\Images\traderules-stage1_1200x214.png" />
+    <Content Include="Content\Resources\Images\TradeRules1.png" />
+    <Content Include="Content\Resources\Images\TradeRules1_1025x238.png" />
+    <Content Include="Content\Resources\Images\TradeRules2.png" />
+    <Content Include="Content\Resources\Images\TradeRules2_1037x362.png" />
+    <Content Include="Content\Resources\Images\TradeRules3.png" />
+    <Content Include="Content\Resources\Images\TradeRules3_704x111.png" />
+    <Content Include="Content\Resources\Images\TradeRules4.png" />
+    <Content Include="Content\Resources\Images\Twitter.png" />
+    <Content Include="Content\Resources\Images\Uploadfilesicon.png" />
+    <Content Include="Content\Resources\Images\userchangepassowrd.png" />
+    <Content Include="Content\Resources\Images\userchangepassowrd_thumb_20_20.png" />
+    <Content Include="Content\Resources\Images\userfeedback.jpg" />
+    <Content Include="Content\Resources\Images\userfeedback_thumb_20_20.jpg" />
+    <Content Include="Content\Resources\Images\usergeneralsetting.png" />
+    <Content Include="Content\Resources\Images\usergeneralsetting_thumb_20_20.png" />
+    <Content Include="Content\Resources\Images\usermyprofile.png" />
+    <Content Include="Content\Resources\Images\usermyprofile_thumb_20_20.png" />
+    <Content Include="Content\Resources\Images\userprofilepic.png" />
+    <Content Include="Content\Resources\Images\userreferafriend.png" />
+    <Content Include="Content\Resources\Images\userreferafriend_thumb_20_20.png" />
+    <Content Include="Content\Resources\Images\usertermsofservice.png" />
+    <Content Include="Content\Resources\Images\usertermsofservice_thumb_20_20.png" />
+    <Content Include="Content\Resources\Images\userupgradeprofile.png" />
+    <Content Include="Content\Resources\Images\userupgradeprofile_thumb_20_20.png" />
+    <Content Include="Content\Resources\Images\useruploadphoto.png" />
+    <Content Include="Content\Resources\Images\useruploadphoto_thumb_20_20.png" />
+    <Content Include="Content\Resources\Images\viewreportsbutton.jpg" />
+    <Content Include="Content\Resources\Images\viewreportsbutton_74x20.jpg" />
+    <Content Include="Content\Resources\Images\viewreportsbutton_79x21.jpg" />
+    <Content Include="Content\Resources\Images\viewreportsbutton_84x22.jpg" />
+    <Content Include="Content\Resources\Images\viewreportsbutton_86x23.jpg" />
+    <Content Include="Content\Resources\Images\ViewTrade.jpg" />
+    <Content Include="Content\Resources\Images\ViewTrade.png" />
+    <Content Include="Content\Resources\Images\ViewTrade1.png" />
+    <Content Include="Content\Resources\Images\ViewTrade1_1147x218.png" />
+    <Content Include="Content\Resources\Images\ViewTradeDetails.png" />
+    <Content Include="Content\Resources\Images\ViewTradeLeg.png" />
+    <Content Include="Content\Resources\Images\ViewTradeOHLC.png" />
+    <Content Include="Content\Resources\Images\ViewTradeOHLC_743x304.png" />
+    <Content Include="Content\Resources\Images\ViewTradePL.png" />
+    <Content Include="Content\Resources\Images\ViewTradePL_835x217.png" />
+    <Content Include="Content\Resources\Images\ViewTradeSummary.png" />
+    <Content Include="Content\Resources\Images\ViewTradeTable\The View Trade page has the.png" />
+    <Content Include="Content\Resources\Images\ViewTradeTable\The View Trade page has the_1.png" />
+    <Content Include="Content\Resources\Images\ViewTradeTable\The View Trade page has the_2.png" />
+    <Content Include="Content\Resources\Images\ViewTradeTable\The View Trade page has the_3.png" />
+    <Content Include="Content\Resources\Images\ViewTradeTable\The View Trade page has the_4.png" />
+    <Content Include="Content\Resources\Images\ViewTradeTable\The View Trade page has the_5.png" />
+    <Content Include="Content\Resources\Images\WeeklyWizard1.jpg" />
+    <Content Include="Content\Resources\Images\WeeklyWizard1_752x246.jpg" />
+    <Content Include="Content\Resources\Images\WeeklyWizard2.jpg" />
+    <Content Include="Content\Resources\Images\WeeklyWizard2_662x340.jpg" />
+    <Content Include="Content\Resources\Images\WeeklyWizard3.jpg" />
+    <Content Include="Content\Resources\Images\WeeklyWizard3_758x220.jpg" />
+    <Content Include="Content\Resources\Images\WeeklyWizard4.jpg" />
+    <Content Include="Content\Resources\Images\WeeklyWizard4_914x175.jpg" />
+    <Content Include="Content\Resources\Images\Wizard.png" />
+    <Content Include="Content\Resources\Images\wizardquicklinkicon.png" />
+    <Content Include="Content\Resources\Images\Xbuttononsignal.png" />
+    <Content Include="Content\Resources\Stylesheets\custom.css" />
+    <Content Include="Content\Resources\Stylesheets\styles.css" />
+    <Content Include="Content\Resources\TableStyles\PatternedRows.css" />
+    <Content Include="Content\Resources\TableStyles\Simple.css" />
+    <Content Include="Content\Resources\TableStyles\SimpleWithPadding.css" />
+    <Content Include="Content\Resources\TableStyles\Standard.css" />
+    <Content Include="csh.js" />
+    <Content Include="Data\Alias.js" />
+    <Content Include="Data\Alias.xml" />
+    <Content Include="Data\Breakpoints.js" />
+    <Content Include="Data\Concepts.js" />
+    <Content Include="Data\Filters.js" />
+    <Content Include="Data\HelpSystem.js" />
+    <Content Include="Data\HelpSystem.xml" />
+    <Content Include="Data\Index.js" />
+    <Content Include="Data\Index_Chunk0.js" />
+    <Content Include="Data\Language.js" />
+    <Content Include="Data\Search.js" />
+    <Content Include="Data\SearchPhrase_Chunk0.js" />
+    <Content Include="Data\SearchPhrase_Chunk1.js" />
+    <Content Include="Data\SearchPhrase_Chunk2.js" />
+    <Content Include="Data\SearchPhrase_Chunk3.js" />
+    <Content Include="Data\SearchPhrase_Chunk4.js" />
+    <Content Include="Data\SearchPhrase_Chunk5.js" />
+    <Content Include="Data\SearchPhrase_Chunk6.js" />
+    <Content Include="Data\SearchPhrase_Chunk7.js" />
+    <Content Include="Data\SearchPhrase_Chunk8.js" />
+    <Content Include="Data\SearchPhrase_Chunk9.js" />
+    <Content Include="Data\SearchStem_Chunk0.js" />
+    <Content Include="Data\SearchStem_Chunk1.js" />
+    <Content Include="Data\SearchTopic_Chunk0.js" />
+    <Content Include="Data\SearchTopic_Chunk1.js" />
+    <Content Include="Data\SearchUrl_Chunk0.js" />
+    <Content Include="Data\Synonyms.js" />
+    <Content Include="Data\Synonyms.xml" />
+    <Content Include="Data\Tocs\OnlineOutput.js" />
+    <Content Include="Data\Tocs\OnlineOutput_Chunk0.js" />
+    <Content Include="Default.htm" />
+    <Content Include="Default.js" />
+    <Content Include="Default_CSH.htm" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\android-icon-36x36.png" />
+    <Content Include="Images\bell-notification.png" />
+    <Content Include="Images\bg.png" />
+    <Content Include="Images\cancel.jpg" />
+    <Content Include="Images\Cancel_Signature.png" />
+    <Content Include="Images\close.jpg" />
+    <Content Include="Images\coming-soon.png" />
+    <Content Include="Images\criteria-3.png" />
+    <Content Include="Images\glyphicons-halflings-white.png" />
+    <Content Include="Images\glyphicons-halflings.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\login-key-icon.png" />
+    <Content Include="Images\login-logo.png" />
+    <Content Include="Images\login.png" />
+    <Content Include="Images\login\background-pattern.png" />
+    <Content Include="Images\login\background.jpg" />
+    <Content Include="Images\login\background1.jpg" />
+    <Content Include="Images\login\login-bg.png" />
+    <Content Include="Images\login\work.jpg" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logout.png" />
+    <Content Include="Images\logo_Email.png" />
+    <Content Include="Images\MappingIcon.png" />
+    <Content Include="Images\small-logo.png" />
+    <Content Include="Images\ui-icons_454545_256x240.png" />
+    <Content Include="Images\welcome.png" />
+    <Content Include="Resources\Scripts\custom.modernizr.js" />
+    <Content Include="Resources\Scripts\foundation.min.js" />
+    <Content Include="Resources\Scripts\jquery.min.js" />
+    <Content Include="Resources\Scripts\jquery.offcanvas.js" />
+    <Content Include="Resources\Scripts\MadCapAll.js" />
+    <Content Include="Resources\Scripts\PIE.htc" />
+    <Content Include="Resources\Scripts\plugins.min.js" />
+    <Content Include="Resources\Scripts\require.config.js" />
+    <Content Include="Resources\Scripts\require.min.js" />
+    <Content Include="Resources\Scripts\stemmer-english.amd.min.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\backfix.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Images\login\Thumbs.db" />
+    <Content Include="Content\Read First.pdf" />
+    <Content Include="Content\Resources\PDF\Delphian_Getting_Started_Guide.pdf" />
+    <Content Include="Content\Resources\PDF\Delphian_State_Modeling_Guide.pdf" />
+    <Content Include="Default.mcwebhelp" />
+    <Content Include="HTML5 - Tripane.mclog" />
+    <Content Include="Content\Resources\PDF\Delphian_Quick_Back_Test_Guide.pdf" />
+    <Content Include="Data\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\PublishProfiles\Help.pubxml" />
+    <Content Include="Scripts\Custom\Web.config" />
+    <Content Include="Resources\Scripts\Web.config" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Custom\ChangePasswordView.js" />
+    <Content Include="Scripts\Custom\DropDowndatesSortSearch.js" />
+    <Content Include="Scripts\Custom\DropDownSortSearch.js" />
+    <Content Include="Scripts\Custom\ErrorDashBoard.js" />
+    <Content Include="Scripts\Custom\ForgotPasswordView.js" />
+    <Content Include="Scripts\Custom\HomeDashboardView.js" />
+    <Content Include="Scripts\Custom\LoginView.js" />
+    <Content Include="Scripts\Custom\OrganizationView.js" />
+    <Content Include="Scripts\Custom\RoleGroupView.js" />
+    <Content Include="Scripts\Custom\RoleManagenmentView.js" />
+    <Content Include="Scripts\Custom\StateAnalysisView.js" />
+    <Content Include="Scripts\Custom\StateTargetsView.js" />
+    <Content Include="Scripts\Custom\UpdateProfileView.js" />
+    <Content Include="Scripts\Custom\UploadImage.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.imgareaselect.js" />
+    <Content Include="Scripts\jquery.mask.js" />
+    <Content Include="Scripts\jquery.mask.min.js" />
+    <Content Include="Scripts\jquery.numeric.min.js" />
+    <Content Include="Scripts\jquery.rss.min.js" />
+    <Content Include="Scripts\jquery.tablesorter.js" />
+    <Content Include="Scripts\jquery.tablesorter.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\kendo\kendo.all.min.js" />
+    <Content Include="Scripts\kendo\kendo.aspnetmvc.min.js" />
+    <Content Include="Scripts\kendo\kendo.timezones.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\linq.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Skins\Default\Stylesheets\Components\Styles.css" />
+    <Content Include="Skins\Default\Stylesheets\DropDownClosed.png" />
+    <Content Include="Skins\Default\Stylesheets\DropDownOpen.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\ArrowCollapsed2.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\ArrowExpanded2.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\blue-star.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\book-icon.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\book-icon7.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\book-open.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\book.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\browse1.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\browse2.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\close.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\collapse.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\Community1.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\Community2.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\delphian-logo_2.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\diagonal_lines.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\doc-icon7.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\doc-icon8.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\edit-profile.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\editProfile2.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\expand.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\Filter.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\FilterOutline.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\glossary1.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\glossary2.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\grey-star.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\help-control.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\highlight.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\highlightClearlight.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\index-collapsed.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\index-expanded.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\index.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\index1.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\index2.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\key.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\left-arrow_1.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\loading-32px.gif" />
+    <Content Include="Skins\Default\Stylesheets\Images\loading.gif" />
+    <Content Include="Skins\Default\Stylesheets\Images\login-dialog-icon.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\login.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\logo.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\magnifying_glass.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\MCSlider_controls.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\MCSlider_loader.gif" />
+    <Content Include="Skins\Default\Stylesheets\Images\navigate-next.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\navigate-previous.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\new-indicator.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\new-indicator3.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\new-indicator4.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\open-book-icon.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\open-book-icon8.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\paragraph.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\printer.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\RatingStars.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\right-arrow_1.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\search-magnify_3.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\SearchIcon.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\select-language.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\select-skin.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\star-empty.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\star-full.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\toc1.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\toc2.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\topic.png" />
+    <Content Include="Skins\Default\Stylesheets\Images\transparent.gif" />
+    <Content Include="Skins\Default\Stylesheets\Images\user.png" />
+    <Content Include="Skins\Default\Stylesheets\Slideshow.css" />
+    <Content Include="Skins\Default\Stylesheets\Styles.css" />
+    <Content Include="Skins\Default\Stylesheets\TextEffects.css" />
+    <Content Include="Skins\Default\Stylesheets\Topic.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\Web.config" />
+    <Content Include="Views\Shared\_MainLayout.cshtml" />
+    <Content Include="Views\Home\Home.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59789</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:59789/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

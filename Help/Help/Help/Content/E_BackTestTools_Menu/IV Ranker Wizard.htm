@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <!-- saved from url=(0016)http://localhost -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>IV Ranker Wizard</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body id="" style="background-color: #ffffff;">
+        <div class="TopicContent">
+            <h2>IV Ranker Wizard</h2>
+            <p><span class="Emphasis">IV Rank Backtest</span> is designed to help you design a strategy using Implied Volatility. Implied volatility can make an option cheap/expensive on a relative basis. Backtest options strategy based on rise or decline in Implied Volatility Rank.</p>
+            <p>&#160;</p>
+            <p>In this section, we are going to show you how to perform a BackTest in the <span class="Emphasis">IV Ranker Modeling Wizard</span> by using an example:</p>
+            <ul class="ul_1">
+                <li class="ListParagraph_1" value="1">We are going to BackTest a <span class="SetOffSecondLevel">Bullish strategy</span>  for <span class="SetOffFirstLevel">IWM</span>.&#160; </li>
+                <li class="ListParagraph_1" value="2">We are going to open one bull call spread on <span class="SetOffFirstLevel">IWM</span> when the 30 day IV Ranker increases into Q2 and exit the trade when the IV Ranker increases into Q3. </li>
+                <li class="ListParagraph_1" value="3">The bull call spread will have the following characteristics:</li>
+            </ul>
+            <ul class="Second_Level">
+                <li class="ListParagraph_2" value="1">Days to expiration: minimum of 30 days to maximum of 60 days</li>
+                <li class="ListParagraph_2" value="2">Strike Selection:<ul><li value="1"><p>Short Call: 35-50 Delta range</p></li><li value="2">Minimum width between calls: $1</li><li value="3">Long Call: 40-55 Delta range</li></ul></li>
+                <li value="3">
+                    <p>Profit target: 25% of the Initial Cost</p>
+                </li>
+                <li class="ListParagraph_2" value="4">Stop loss: 100% of the Initial Cost</li>
+            </ul>
+            <p>&#160;</p>
+            <p>There are 3 steps to complete this BackTest: <span class="SetOffSecondLevel">Entry-Exit Dates &gt;&gt;&#160;Trade Rules &gt;&gt; Preview</span></p>
+            <h3>Entry-Exit Dates:</h3>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Input a name for the dates to be saved under <span class="SetOffSecondLevel">IWM IV Ranker</span>.&#160; </li>
+                <li class="ListParagraph" value="2">Select the stock you want to test <span class="SetOffFirstLevel">IWM</span>.&#160; </li>
+                <li class="ListParagraph" value="3">Input the date range to be tested in From Date <span class="SetOffSecondLevel">01/03/2007</span> and To Date <span class="SetOffSecondLevel">05/08/2017</span>.</li>
+                <li class="ListParagraph" value="4">Select the IV Days as <span class="SetOffSecondLevel">30</span>.</li>
+                <li class="ListParagraph" value="5">Select the Entry Direction as <span class="SetOffSecondLevel">Increase</span> and the Entry Quartile as <span class="SetOffSecondLevel">Q2</span>. </li>
+                <li class="ListParagraph" value="6">Select the Exit Direction as<span class="SetOffSecondLevel">Increase</span> and the Exit Quartile as <span class="SetOffSecondLevel">Q3</span>.<img src="../Resources/Images/IVRankerWizard1_721x233.jpg" style="width: 721;height: 233;" class="screenshots" /></li>
+                <li class="ListParagraph" value="7">Click <img src="../Resources/Images/nextbutton_44x25.jpg" style="width: 44;height: 25;" /> to save your Entry-Exit Dates and to move on to Trade Rules. </li>
+            </ol>
+            <p class="p_2">
+                <h3>Trade Rules:</h3>
+            </p>
+            <ol>
+                <li value="1">Input a name for the trade rules to be saved under <span class="SetOffSecondLevel">IWM Bull Call Spread</span>.&#160; </li>
+                <li value="2">Click the <span class="SetOffSecondLevel">Strategy</span> drop down menu and select <span class="SetOffSecondLevel">Bull Call</span> with <span class="SetOffSecondLevel">Market</span> as Spread.</li>
+                <li value="3">Input the minimum and maximum days to expiration as <span class="SetOffSecondLevel">30</span> and <span class="SetOffSecondLevel">60</span>. <img src="../Resources/Images/IVRankerWizard2_788x428.jpg" style="width: 788;height: 428;" class="screenshots" /></li>
+                <li value="4">Input the minimum and maximum delta range as:</li>
+            </ol>
+            <ul class="Second_Level">
+                <li value="1">Long Call (Buy1) <span class="SetOffSecondLevel">40</span> and <span class="SetOffSecondLevel">55</span> <![CDATA[ ]]></li>
+                <li value="2">Short Call (Sell1) <span class="SetOffSecondLevel">35</span> and <span class="SetOffSecondLevel">50</span></li>
+            </ul>
+            <ol class="Second_Level" start="5">
+                <li value="5">Input the minimum width between the calls as <span class="SetOffSecondLevel">1</span>.</li>
+                <li value="6">Enter the profit target % as <span class="SetOffSecondLevel">25</span> based off the <span class="SetOffSecondLevel">InitialCost</span>.</li>
+                <li value="7">Enter the stop loss % as <span class="SetOffSecondLevel">100</span> based off the <span class="SetOffSecondLevel">InitialCost</span>.<img src="../Resources/Images/IVRankerWizard3_912x352.jpg" class="screenshots" style="width: 912;height: 352;" /></li>
+                <li value="8">Click <img src="../Resources/Images/nextbutton_52x30.jpg" style="width: 52;height: 30;" />to save your Trade Rules and to move on to Preview. </li>
+            </ol>
+            <h3><span class="span_1">Preview</span>
+            </h3>
+            <p>All fields will auto-populate.&#160; For risk per trade, you can select a dollar amount/trade, contracts/trade or a custom amount created manually.</p>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Click <img src="../Resources/Images/backtestbuttonarrow_70x27.jpg" style="width: 70;height: 27;" /> to have the system run the tests.  <img src="../Resources/Images/IVRankerWizard4_911x278.png" class="screenshots" style="width: 911;height: 278;" /></li>
+                <li class="ListParagraph" value="2">Select <img src="../Resources/Images/viewreportsbutton_84x22.jpg" style="width: 84;height: 22;" /> to go to the BackTest results page. </li>
+            </ol>
+        </div>
+        <p>&#160;</p>
+        <p style="font-size: 8pt;">&#160;</p>
+        <div class="FooterTable" style="margin-left: -17px;margin-right: -17px;orphans: 0;page-break-after: always;column-break-after: always;frame-break-after: always;widows: 0;border-left-style: solid;border-left-width: 0px;border-left-color: #4169e1;border-right-style: solid;border-right-width: 0px;border-right-color: #4169e1;border-top-style: solid;border-top-width: 5px;border-top-color: #f7dc68;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #4169e1;background-color: #143657;padding-left: 17px;padding-right: 17px;padding-top: 10px;padding-bottom: 0px;margin-bottom: -25px;font-size: 8pt;">
+            <hr width="100%" size="0" align="center" />
+            <p style="text-align: center;"><span style="font-family: Lato; font-size: 8pt;">Copyright 2017 © Capmark Solutions LLC. All Rights Reserved | Disclaimer</span>
+            </p>
+        </div>
+    </body>
+</html>

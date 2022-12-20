@@ -1,0 +1,1 @@
+define({'Headings':{l:[{u:'/Content/A_Introduction Topics/Introduction.htm#kanchor1',t:'INTRODUCTION'}]}});

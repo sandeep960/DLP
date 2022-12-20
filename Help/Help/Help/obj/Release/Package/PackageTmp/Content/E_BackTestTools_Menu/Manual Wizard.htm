@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <!-- saved from url=(0016)http://localhost -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Manual Wizard</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body id="" style="background-color: #ffffff;">
+        <div class="TopicContent">
+            <h2>Manual Wizard</h2>
+            <p>The <span class="Emphasis">Manual Wizard</span> backtests models by manually inputting dates for your stocks or stock list.</p>
+            <p>&#160;</p>
+            <p>In this section, we are going to show you how to perform a BackTest in the <span class="span_2"><span class="Emphasis">Manual Modeling Wizard</span></span> by using an example:</p>
+            <ul class="ul_1">
+                <li class="ListParagraph_1" value="1">We are going to BackTest a <span class="SetOffSecondLevel">Bearish strategy</span> for <span class="SetOffFirstLevel">SPX</span>.&#160; </li>
+                <li class="ListParagraph_1" value="2">We are going to purchase one put for <span class="SetOffFirstLevel">SPX</span> on the first trading day of May for the past ten years.&#160; We will exit the trade on the first trading day of August.&#160;  </li>
+                <li class="ListParagraph_1" value="3">The long put will have the following characteristics:</li>
+            </ul>
+            <ul class="Second_Level">
+                <li value="1">Days to expiration: minimum of 90 days to maximum of 120 days</li>
+                <li value="2">Strike Selection: 40-60 Delta Range</li>
+                <li value="3">Profit target: 150% of the Initial Cost</li>
+                <li value="4">Stop loss: 75% of the Initial Cost</li>
+            </ul>
+            <p>&#160;</p>
+            <p>There are 3 steps to complete this BackTest: <span class="SetOffSecondLevel">Entry-Exit Dates -&gt; Trade Rules -&gt; Preview</span></p>
+            <h3>Entry-Exit Dates:</h3>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Input a name for the dates to be saved under <span class="SetOffSecondLevel">Sell in May_SPX</span>.&#160; </li>
+                <li class="ListParagraph" value="2">Input the stock you want to test in the <span class="SetOffSecondLevel">Symbol</span> column.&#160; </li>
+                <li class="ListParagraph" value="3">Input the dates to open the trade in the <span class="SetOffSecondLevel">Entry Date</span> column.</li>
+                <li class="ListParagraph" value="4">Enter the dates to close the trade in the <span class="SetOffSecondLevel">Exit Date</span> column.</li>
+                <li class="ListParagraph" value="5">Click <img src="../Resources/Images/addmoredates_97x19.png" style="width: 97;height: 19;" /> if you want to add more rows and trades.<img src="../Resources/Images/ManualWizard1_768x337.png" style="width: 768;height: 337;" class="screenshots" /></li>
+                <li class="ListParagraph" value="6">Click <img src="../Resources/Images/nextbutton_48x28.jpg" style="width: 48;height: 28;" /> to save your Entry-Exit Dates and to move on to Trade Rules.</li>
+            </ol>
+            <h3>Trade Rules:</h3>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Input a name for the trade rules to be saved under <span class="SetOffSecondLevel">Long Put</span>.&#160; </li>
+                <li class="ListParagraph" value="2">Click the <span class="SetOffSecondLevel">Strategy</span> drop down menu and select <span class="SetOffSecondLevel">Long&#160;Put</span>. <img src="../Resources/Images/ManualWizard2.png" class="screenshots" /></li>
+            </ol>
+            <ol start="3" class="ol_1">
+                <li class="ListParagraph" value="3">Enter the minimum and maximum days to expiration as <span class="SetOffSecondLevel">90</span> and <span class="SetOffSecondLevel">120</span>.</li>
+                <li class="ListParagraph" value="4">Input the minimum and maximum delta range as <span class="SetOffSecondLevel">40</span> and <span class="SetOffSecondLevel">60</span>.</li>
+                <li class="ListParagraph" value="5">Input the profit target % as <span class="SetOffSecondLevel">150</span> based off the <span class="SetOffSecondLevel">InitialCost</span>.</li>
+                <li class="ListParagraph" value="6">Enter the stop loss % as <span class="SetOffSecondLevel">75</span> based off the <span class="SetOffSecondLevel">InitialCost</span>.<img src="../Resources/Images/ManualWizard3_713x330.png" class="screenshots" style="width: 713;height: 330;" /></li>
+                <li class="ListParagraph" value="7">Click <img src="../Resources/Images/nextbutton_46x26.jpg" style="width: 46;height: 26;" /> to save your Trade Rules and to move on to Preview. </li>
+            </ol>
+            <h3 class="Heading3">Preview:</h3>
+            <p>All fields will auto-populate.&#160; For risk per trade, you can select a dollar amount/trade, contracts/trade or a custom amount created manually.</p>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Click <img src="../Resources/Images/backtestbuttonarrow_64x25.jpg" style="width: 64;height: 25;" /> to have the system run the tests. <img src="../Resources/Images/ManualWizard4_778x155.png" style="width: 778;height: 155;" class="screenshots" /></li>
+                <li class="ListParagraph" value="2">Select <img src="../Resources/Images/viewreportsbutton_79x21.jpg" style="width: 79;height: 21;" /> to go to the BackTest results page. </li>
+            </ol>
+        </div>
+        <p>&#160;</p>
+        <p style="font-size: 8pt;">&#160;</p>
+        <div class="FooterTable" style="margin-left: -17px;margin-right: -17px;orphans: 0;page-break-after: always;column-break-after: always;frame-break-after: always;widows: 0;border-left-style: solid;border-left-width: 0px;border-left-color: #4169e1;border-right-style: solid;border-right-width: 0px;border-right-color: #4169e1;border-top-style: solid;border-top-width: 5px;border-top-color: #f7dc68;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #4169e1;background-color: #143657;padding-left: 17px;padding-right: 17px;padding-top: 10px;padding-bottom: 0px;margin-bottom: -25px;font-size: 8pt;">
+            <hr width="100%" size="0" align="center" />
+            <p style="text-align: center;"><span style="font-family: Lato; font-size: 8pt;">Copyright 2017 © Capmark Solutions LLC. All Rights Reserved | Disclaimer</span>
+            </p>
+        </div>
+    </body>
+</html>

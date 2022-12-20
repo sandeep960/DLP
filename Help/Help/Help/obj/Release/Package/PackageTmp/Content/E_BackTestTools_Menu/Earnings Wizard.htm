@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <!-- saved from url=(0016)http://localhost -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Earnings Wizard </title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body id="" style="background-color: #ffffff;">
+        <div class="TopicContent">
+            <h2 class="Heading2">Earnings Wizard </h2>
+            <p>The <span class="Emphasis">Earnings Backtest</span> is designed to help you design a strategy to trade options around the earnings of the underlying.</p>
+            <ol>
+                <li value="1">Stocks tend to rise or fall significantly after an earnings report.</li>
+                <li value="2">Implied Volatility expands and contracts around the earnings report.</li>
+                <li value="3">There are five different kinds of earnings strategies to use that help you trade around the price movement and volatility rise/fall around earnings day.</li>
+            </ol>
+            <p>&#160;</p>
+            <p>In this section, we are going to show you how to perform a BackTest in the <span class="Emphasis">Earnings Wizard</span> by using an example:</p>
+            <ul class="ul_1">
+                <li class="ListParagraph_1" value="1">We are going to BackTest a <span class="SetOffSecondLevel">Bullish strategy</span>  for <span class="SetOffFirstLevel">Twitter’s</span> past 10 earnings reports.&#160; </li>
+                <li class="ListParagraph_1" value="2">We are going to purchase one long call after <span class="SetOffFirstLevel">TWTR’s</span> earnings report and run BackTests to exit the trade 10, 15 &amp; 20 days later.</li>
+                <li class="ListParagraph_1" value="3">The <span class="SetOffSecondLevel">long call</span> will have the following characteristics:</li>
+            </ul>
+            <ul class="Second_Level">
+                <li value="1">Days to expiration: minimum of 30 days to maximum of 60 days</li>
+                <li value="2">Strike Selection: 40-60 Delta Range</li>
+                <li value="3">Profit target: 50% of the Initial Cost</li>
+                <li value="4">Stop loss: 25% of the Initial Cost</li>
+            </ul>
+            <p>&#160;</p>
+            <p>There are 3 steps to complete this BackTest: <span class="SetOffSecondLevel">Entry-Exit Dates &gt;&gt; Trade Rules &gt;&gt; Preview</span>.</p>
+            <h3 class="Heading3">Entry-Exit Dates:</h3>
+            <ol>
+                <li value="1">Input the stock symbol <span class="SetOffFirstLevel">TWTR</span>.&#160; </li>
+                <li value="2">Input a name for the dates to be saved under <span class="SetOffSecondLevel">TWTR Runne</span>r.&#160; </li>
+                <li value="3">Select the type of Earning Play as <span class="SetOffSecondLevel">Runner</span>.</li>
+                <li value="4">De-select any Earnings Date(s) you want to exclude from the BackTest results.</li>
+            </ol>
+            <blockquote>
+                <p>
+                    <img src="../Resources/Images/EarningsWizard1_656x284.png" class="screenshots" style="width: 656;height: 284;" />
+                </p>
+            </blockquote>
+            <h3 class="Heading3">Trade Rules:</h3>
+            <ol>
+                <li value="1">Input a name for the trade rules to be saved under <span class="SetOffSecondLevel">TWTR Long Call</span>.&#160; </li>
+                <li value="2">
+                    <p>Click the strategy drop down menu and select <span class="SetOffSecondLevel">Long Call</span>. </p>
+                    <p>
+                        <img src="../Resources/Images/EarningsWizard2_586x167.jpg" class="screenshots" style="width: 586;height: 167;" />
+                    </p>
+                </li>
+                <li value="3">Input the minimum and maximum days to expiration <span class="SetOffSecondLevel">30</span> and <span class="SetOffSecondLevel">60</span>.</li>
+                <li value="4">Input the minimum and maximum delta range <span class="SetOffSecondLevel">40</span> and <span class="SetOffSecondLevel">60</span>.</li>
+                <li value="5">Input the profit target % as <span class="SetOffSecondLevel">50</span> based off the <span class="SetOffSecondLevel">InitialCost</span>.</li>
+                <li value="6">Input the stop loss % as <span class="SetOffSecondLevel">25</span> based off the <span class="SetOffSecondLevel">InitialCost</span>.</li>
+                <li value="7">Click <img src="../Resources/Images/nextbutton_51x29.jpg" style="width: 51;height: 29;" /> to save your Trade Rules and to move on to <span class="SetOffSecondLevel">Preview</span>.</li>
+            </ol>
+            <p>
+                <img src="../Resources/Images/EarningsWizard3_755x317.jpg" class="screenshots" style="width: 755;height: 317;" />
+            </p>
+            <h3 class="Heading3">Preview:</h3>
+            <p>All fields will auto-populate.&#160; For risk per trade, you can select a dollar amount/trade, contracts/trade or a custom amount created manually.</p>
+            <ol>
+                <li value="1">Click the <img src="../Resources/Images/backtestbuttonarrow_77x30.jpg" style="width: 77;height: 30;" />  to have the system run the tests.</li>
+                <li value="2">Select <img src="../Resources/Images/viewreportsbutton_84x22.jpg" style="width: 84;height: 22;" /> to go to the BackTest results page. <img src="../Resources/Images/EarningsWizard4_735x185.jpg" class="screenshots" style="width: 735;height: 185;" /></li>
+            </ol>
+        </div>
+        <p>&#160;</p>
+        <p style="font-size: 8pt;">&#160;</p>
+        <div class="FooterTable" style="margin-left: -17px;margin-right: -17px;orphans: 0;page-break-after: always;column-break-after: always;frame-break-after: always;widows: 0;border-left-style: solid;border-left-width: 0px;border-left-color: #4169e1;border-right-style: solid;border-right-width: 0px;border-right-color: #4169e1;border-top-style: solid;border-top-width: 5px;border-top-color: #f7dc68;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #4169e1;background-color: #143657;padding-left: 17px;padding-right: 17px;padding-top: 10px;padding-bottom: 0px;margin-bottom: -25px;font-size: 8pt;">
+            <hr width="100%" size="0" align="center" />
+            <p style="text-align: center;"><span style="font-family: Lato; font-size: 8pt;">Copyright 2017 © Capmark Solutions LLC. All Rights Reserved | Disclaimer</span>
+            </p>
+        </div>
+    </body>
+</html>

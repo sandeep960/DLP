@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <!-- saved from url=(0016)http://localhost -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Weekly Trade Wizard</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body id="" style="background-color: #ffffff;">
+        <div class="TopicContent">
+            <h2>Weekly Trade Wizard</h2>
+            <p><span class="Emphasis">Weekly Trades Backtest</span> is designed to help you design a strategy based on systematic weekly calendar trading.</p>
+            <p>Backtest using weekly calendar trading strategies such as Iron Condors, and variations of butterflies as a way to generate income.</p>
+            <p>&#160;</p>
+            <p>In this section, we are going to show you how to perform a BackTest in the <span class="Emphasis">Weekly </span><span class="span_2"><span class="Emphasis">Trade Modeling Wizard</span> <![CDATA[ ]]></span>by using an example:</p>
+            <ul class="ul_1">
+                <li class="ListParagraph_1" value="1">We are going to BackTest a <span class="SetOffSecondLevel">Bullish strategy</span> for <span class="SetOffFirstLevel">QQQ</span>.&#160; </li>
+                <li class="ListParagraph_1" value="2">We are going to sell one weekly put on <span class="SetOffFirstLevel">QQQ</span> for the past year.</li>
+                <li class="ListParagraph_1" value="3">The naked put will have the following characteristics:</li>
+            </ul>
+            <ul class="Second_Level">
+                <li value="1">Enter the trade on the previous Thursday and exit on the Friday expiration</li>
+                <li value="2">Days to expiration: minimum of 3 days to maximum of 12 days</li>
+                <li value="3">Strike Selection: 30-45 Delta Range</li>
+                <li value="4">Profit target: 100% of Maximum Profit</li>
+                <li value="5">Stop loss: 50% of Initial Risk </li>
+            </ul>
+            <p>&#160;</p>
+            <p>There are 3 steps to complete this BackTest: <span class="SetOffSecondLevel">Entry-Exit Dates &gt;&gt; Trade Rules &gt;&gt; Preview</span></p>
+            <h3 class="Heading3">Entry-Exit Dates:</h3>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Input a name for the dates to be saved under <span class="SetOffSecondLevel">QQQ Naked Put</span>.&#160; </li>
+                <li class="ListParagraph" value="2">Input the stock symbol as <span class="SetOffSecondLevel">QQQ</span>.&#160; </li>
+                <li class="ListParagraph" value="3">Input the date range to be tested in From Date <span class="SetOffSecondLevel">05/05/2016</span> and To Date <span class="SetOffSecondLevel">05/05/2017</span>.</li>
+                <li class="ListParagraph" value="4">Select the day of the week you want to enter the trade as <span class="SetOffSecondLevel">Pwd-Thursday</span>.</li>
+                <li class="ListParagraph" value="5">Select the day of the week you want to exit the trade as <span class="SetOffSecondLevel">Friday</span> and Skip <span class="SetOffSecondLevel">1</span> Weekly expiration.</li>
+                <li class="ListParagraph" value="6">Click <img src="../Resources/Images/nextbutton_54x31.jpg" style="width: 54;height: 31;" /> to save your Entry-Exit Dates and to move on to Trade Rules. <img src="../Resources/Images/WeeklyWizard1_752x246.jpg" class="screenshots" style="width: 752;height: 246;" /></li>
+            </ol>
+            <p class="p_2">
+                <h3>Trade Rules:</h3>
+            </p>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Input a name for the trade rules to be saved under <span class="SetOffSecondLevel">QQQ Naked Put</span>.&#160; </li>
+                <li class="ListParagraph" value="2">Click the strategy drop down menu and select <span class="SetOffSecondLevel">Naked Put</span>. </li>
+            </ol>
+            <ol start="3" class="ol_1">
+                <li class="ListParagraph" value="3">Input the minimum and maximum days to expiration as <span class="SetOffSecondLevel">3</span> and <span class="SetOffSecondLevel">12</span>.<img src="../Resources/Images/WeeklyWizard2_662x340.jpg" class="screenshots" style="width: 662;height: 340;" /></li>
+                <li class="ListParagraph" value="4">Input the minimum and maximum delta range as <span class="SetOffSecondLevel">30</span> and <span class="SetOffSecondLevel">45</span>.</li>
+                <li class="ListParagraph" value="5">Input the profit target % as <span class="SetOffSecondLevel">100</span> based off the <span class="SetOffSecondLevel">MaxProfit</span>.</li>
+                <li class="ListParagraph" value="6">Input the stop loss % as <span class="SetOffSecondLevel">50</span> based off the <span class="SetOffSecondLevel">CurrentRisk</span>.<img src="../Resources/Images/WeeklyWizard3_758x220.jpg" class="screenshots" style="width: 758;height: 220;" /></li>
+                <li class="ListParagraph" value="7">Click <img src="../Resources/Images/nextbutton_51x29.jpg" style="width: 51;height: 29;" /> to save your Trade Rules and to move on to Preview. </li>
+            </ol>
+            <h3 class="Heading3">Preview:</h3>
+            <p>All fields will auto-populate.&#160; For risk per trade, you can select a dollar amount/trade, contracts/trade or a custom amount created manually.</p>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Click <img src="../Resources/Images/backtestbuttonarrow_67x25.jpg" style="width: 67;height: 25;" /> to have the system run the tests.<p><img src="../Resources/Images/WeeklyWizard4_914x175.jpg" class="screenshots" style="width: 914;height: 175;" /></p></li>
+                <li class="ListParagraph" value="2">Select <img src="../Resources/Images/viewreportsbutton_84x22.jpg" style="width: 84;height: 22;" /> to go to the BackTest results page. </li>
+            </ol>
+        </div>
+        <p>&#160;</p>
+        <p style="font-size: 8pt;">&#160;</p>
+        <div class="FooterTable" style="margin-left: -17px;margin-right: -17px;orphans: 0;page-break-after: always;column-break-after: always;frame-break-after: always;widows: 0;border-left-style: solid;border-left-width: 0px;border-left-color: #4169e1;border-right-style: solid;border-right-width: 0px;border-right-color: #4169e1;border-top-style: solid;border-top-width: 5px;border-top-color: #f7dc68;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #4169e1;background-color: #143657;padding-left: 17px;padding-right: 17px;padding-top: 10px;padding-bottom: 0px;margin-bottom: -25px;font-size: 8pt;">
+            <hr width="100%" size="0" align="center" />
+            <p style="text-align: center;"><span style="font-family: Lato; font-size: 8pt;">Copyright 2017 © Capmark Solutions LLC. All Rights Reserved | Disclaimer</span>
+            </p>
+        </div>
+    </body>
+</html>

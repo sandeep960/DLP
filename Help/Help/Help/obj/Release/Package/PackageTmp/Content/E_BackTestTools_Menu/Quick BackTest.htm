@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]">
+    <!-- saved from url=(0016)http://localhost -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Quick BackTest </title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body id="" style="background-color: #ffffff;">
+        <div class="TopicContent">
+            <h2 class="Heading2">Quick BackTest </h2>
+            <p>The <span class="Emphasis">Quick BackTest</span> is shown below:</p>
+            <p>
+                <img src="../Resources/Images/4.BackTest _Mike and Josh/Quick BackTest Panel_624x172.png" style="width: 624;height: 172;" class="screenshots" />
+            </p>
+            <p />
+            <h3 class="Heading3">Description of fields</h3>
+            <table class="table_2">
+                <col style="width: 25pt;" />
+                <col style="width: 98pt;" />
+                <col style="width: 103pt;" />
+                <col style="width: 268pt;" />
+                <tr style="height: 20pt;">
+                    <td>&#160;</td>
+                    <td class="td_15">
+                        <p class="p_12"><span class="SetOffSecondLevel">Symbol</span>
+                        </p>
+                    </td>
+                    <td class="td_18">
+                        <p class="p_5">Mandatory field.</p>
+                    </td>
+                    <td class="td_18">
+                        <p class="p_5">It is a text field to input the underlying symbol. </p>
+                    </td>
+                </tr>
+                <tr style="height: 34pt;">
+                    <td>&#160;</td>
+                    <td class="td_19">
+                        <p class="p_13"><span class="SetOffSecondLevel">Expiration</span>
+                        </p>
+                        <p>&#160;</p>
+                        <p class="p_13"><span class="SetOffSecondLevel">Risk $ per Trade</span>
+                        </p>
+                    </td>
+                    <td class="td_20">
+                        <p class="p_14">Mandatory field.</p>
+                        <p>&#160;</p>
+                        <p class="p_14">Mandatory field.</p>
+                    </td>
+                    <td class="td_20">
+                        <p class="p_14">Provides the ability to trade weekly or monthly options.</p>
+                        <p>&#160;</p>
+                        <p class="p_14">The amount the user is willing to risk per trade.</p>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr style="height: 34pt;">
+                    <td>&#160;</td>
+                    <td class="td_19">
+                        <p class="p_13"><span class="SetOffSecondLevel">Strike</span>
+                        </p>
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_20">
+                        <p class="p_14">Mandatory field.</p>
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_20">
+                        <p><span class="span_9">The strike selection for the trade.&#160; In the money</span> <span class="span_9">(ITM), at the money (ATM), or out of the money (OTM).</span></p>
+                    </td>
+                </tr>
+                <tr style="height: 33pt;">
+                    <td>&#160;</td>
+                    <td class="td_19">
+                        <p class="p_13"><span class="SetOffSecondLevel">Strategy</span>
+                        </p>
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_20">
+                        <p class="p_14">Mandatory field.</p>
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_20">
+                        <p class="p_14">This field provides the list of options strategies that can be used. </p>
+                    </td>
+                </tr>
+                <tr style="height: 33pt;">
+                    <td>&#160;</td>
+                    <td class="td_19">
+                        <p class="p_13"><span class="SetOffSecondLevel">Days to Expire</span>
+                        </p>
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_20">
+                        <p class="p_14">Mandatory field.</p>
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_20">
+                        <p class="p_14">This fields requires the user to manually enter the minimum number or days to expiration for the option trade.</p>
+                    </td>
+                </tr>
+                <tr style="height: 33pt;">
+                    <td>&#160;</td>
+                    <td class="td_19">
+                        <p class="p_13"><span class="SetOffSecondLevel">Profit Target (%)</span>
+                        </p>
+                    </td>
+                    <td class="td_20">
+                        <p class="p_14">Mandatory Field.</p>
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_20">
+                        <p class="p_14">Exit position based on percent of profit made.</p>
+                    </td>
+                </tr>
+                <tr style="height: 33pt;">
+                    <td>&#160;</td>
+                    <td class="td_19">
+                        <p class="p_13"><span class="SetOffSecondLevel">Ignore Exit Date</span>
+                        </p>
+                    </td>
+                    <td class="td_20">
+                        <p class="p_14">Default set to No</p>
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_20">
+                        <p class="p_14">Does not ignores the exit date when No selected.</p>
+                    </td>
+                </tr>
+                <tr style="height: 33pt;">
+                    <td>&#160;</td>
+                    <td class="td_19">
+                        <p class="p_12"><span class="SetOffSecondLevel">State</span>
+                        </p>
+                    </td>
+                    <td class="td_20">
+                        <p class="p_5">Mandatory Field.</p>
+                    </td>
+                    <td class="td_20">
+                        <p><span class="span_10"><span class="GeneralCompanyName">Delphian</span> Proprietary State Modelling™</span> <span class="span_3">lets you choose from state 1 through 8.</span></p>
+                    </td>
+                </tr>
+                <tr style="height: 34pt;">
+                    <td>&#160;</td>
+                    <td class="td_19">
+                        <p class="p_12"><span class="SetOffSecondLevel">Stop Loss (%)</span>
+                        </p>
+                    </td>
+                    <td class="td_20">
+                        <p class="p_5">Mandatory Field.</p>
+                    </td>
+                    <td class="td_20">
+                        <p class="p_5">Provide a specified price in order to limit a loss.</p>
+                    </td>
+                </tr>
+            </table>
+            <p>&#160;</p>
+            <p />
+            <h3 class="Heading3">Execute a Quick BackTest </h3>
+            <p>To execute the <span class="span_4">Quick BackTest</span>:</p>
+            <ol start="1" class="ol_4">
+                <li value="1">Input data into each required field of the <span class="span_4">Quick BackTest</span> panel.</li>
+                <li value="2">Click <img src="../Resources/Images/4.BackTest _Mike and Josh/Quick BackTest Panel_1.png" style="height: 16px;width: 59px;" class="img_1" /> to execute the test.</li>
+            </ol>
+            <blockquote>
+                <p class="p_7">
+                    <img src="../Resources/Images/4.BackTest _Mike and Josh/Quick BackTest Panel_2_624x174.png" style="width: 624;height: 174;" class="screenshots" />
+                </p>
+            </blockquote>
+            <ol start="3" class="ol_4">
+                <li value="3">When the test is successfully executed, the <img src="../Resources/Images/4.BackTest _Mike and Josh/Quick BackTest Panel_3.png" style="height: 17px;width: 90px;" class="img_1" /> button appears next to the <img src="../Resources/Images/4.BackTest _Mike and Josh/Quick BackTest Panel_1.png" style="height: 16px;width: 59px;" class="img_1" /> button. Click the <img src="../Resources/Images/4.BackTest _Mike and Josh/Quick BackTest Panel_3.png" style="height: 17px;width: 90px;" class="img_1" /> button to view the results.</li>
+            </ol>
+            <blockquote>
+                <p class="p_7">
+                    <img src="../Resources/Images/4.BackTest _Mike and Josh/Quick BackTest Panel_4_624x254.png" style="width: 624;height: 254;" class="screenshots" />
+                </p>
+            </blockquote>
+            <ol start="4" class="ol_4">
+                <li value="4">The summary panel displays the results of the test. </li>
+            </ol>
+            <p>You can populate the same fields as the previously run quick back tests by clicking <img src="../Resources/Images/4.BackTest _Mike and Josh/Quick BackTest Panel_5.png" style="height: 22px;width: 68px;" class="img_1" />&#160; from the <span class="Emphasis">Last 10 Quick BackTests</span> panel.</p>
+            <p class="p_7">&#160;</p>
+        </div>
+        <p>&#160;</p>
+        <p style="font-size: 8pt;">&#160;</p>
+        <div class="FooterTable" style="margin-left: -17px;margin-right: -17px;orphans: 0;page-break-after: always;column-break-after: always;frame-break-after: always;widows: 0;border-left-style: solid;border-left-width: 0px;border-left-color: #4169e1;border-right-style: solid;border-right-width: 0px;border-right-color: #4169e1;border-top-style: solid;border-top-width: 5px;border-top-color: #f7dc68;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #4169e1;background-color: #143657;padding-left: 17px;padding-right: 17px;padding-top: 10px;padding-bottom: 0px;margin-bottom: -25px;font-size: 8pt;">
+            <hr width="100%" size="0" align="center" />
+            <p style="text-align: center;"><span style="font-family: Lato; font-size: 8pt;">Copyright 2017 © Capmark Solutions LLC. All Rights Reserved | Disclaimer</span>
+            </p>
+        </div>
+    </body>
+</html>

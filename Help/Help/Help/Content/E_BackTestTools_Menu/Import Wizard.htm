@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <!-- saved from url=(0016)http://localhost -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Import Wizard</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body id="" style="background-color: #ffffff;">
+        <div class="TopicContent">
+            <h2>Import Wizard</h2>
+            <p>The <span class="Emphasis">Import Wizard</span> is for users who use different systems or services to generate Entry and Exit dates for any equities.</p>
+            <p>You can import these dates and design an options strategy that may meet your risk-reward expectations.</p>
+            <p>&#160;</p>
+            <p>In this section, we are going to show you how to perform a BackTest in the Import Wizard by using an example:</p>
+            <ul class="ul_1">
+                <li class="ListParagraph_1" value="1">We are going to BackTest a <span class="SetOffSecondLevel">Bearish strategy</span> for <span class="SetOffFirstLevel">SPX</span>.&#160; </li>
+                <li class="ListParagraph_1" value="2">We are going to purchase one put for <span class="SetOffFirstLevel">SPX</span> on the first trading day of May for the past ten years.&#160; We will exit the trade on the first trading day of August.&#160;  </li>
+                <li class="ListParagraph_1" value="3">The <span class="SetOffSecondLevel">long put</span> will have the following characteristics:</li>
+            </ul>
+            <ul class="Second_Level">
+                <li value="1">Days to expiration: minimum of 90 days to maximum of 120 days</li>
+                <li value="2">Strike Selection: 40-60 Delta Range</li>
+                <li value="3">Profit target: 150% of the Initial Cost</li>
+                <li value="4">Stop loss: 75% of the Initial Cost</li>
+            </ul>
+            <p>&#160;</p>
+            <p>There are 3 steps to complete this BackTest: <span class="SetOffSecondLevel">Entry-Exit Dates &gt;&gt; Trade Rules &gt;&gt; Preview</span></p>
+            <h3 class="Heading3">Entry-Exit Dates:</h3>
+            <ol>
+                <li value="1">Input a name for the dates to be saved under <span class="SetOffSecondLevel">Sell in May - SPX</span>.&#160; </li>
+                <li value="2">Click on the Excel icon <img src="../Resources/Images/excelicon_30x30.png" style="width: 30;height: 30;" />to download the trade format.&#160; </li>
+                <li value="3">Fill the trade format file with your entry dates, exit dates and symbols.&#160; <img src="../Resources/Images/ImportWizard1_387x232.png" class="screenshots" style="width: 387;height: 232;" /></li>
+                <li value="4">Click inside the <img src="../Resources/Images/Uploadfilesicon.png" />box to upload the file.</li>
+                <li value="5">Verify the dates have been uploaded.<img src="../Resources/Images/ImportWizard2_671x221.png" style="width: 671;height: 221;" class="screenshots" /></li>
+                <li value="6">Click <img src="../Resources/Images/nextbutton_48x27.jpg" style="width: 48;height: 27;" /> to save your Entry-Exit Dates and to move on to Trade Rules. </li>
+            </ol>
+            <h3 class="Heading3"> Trade Rules:</h3>
+            <ol>
+                <li value="1">Input a name for the trade rules to be saved under <span class="SetOffSecondLevel">Long Put</span>.&#160; </li>
+                <li value="2">Click the <span class="SetOffSecondLevel">Strategy</span> drop down menu and select <span class="SetOffSecondLevel">Long Put</span>. <img src="../Resources/Images/ImportWizard3_597x236.png" style="width: 597;height: 236;" class="screenshots" /></li>
+                <li value="3">Enter the minimum and maximum days to expiration as <span class="SetOffSecondLevel">90</span> and <span class="SetOffSecondLevel">120</span>.</li>
+                <li value="4">Type the minimum and maximum delta range as <span class="SetOffSecondLevel">40</span> and <span class="SetOffSecondLevel">60</span>.</li>
+                <li value="5">Enter the profit target % as <span class="SetOffSecondLevel">150</span> based off the <span class="SetOffSecondLevel">InitialCost</span>.</li>
+                <li value="6">Enter the stop loss % as <span class="SetOffSecondLevel">75</span> based off the <span class="SetOffSecondLevel">InitialCost</span>.<img src="../Resources/Images/ImportWizard4_675x292.png" style="width: 675;height: 292;" class="screenshots" /></li>
+                <li value="7">Click  <img src="../Resources/Images/nextbutton_45x26.jpg" style="width: 45;height: 26;" />to save your Trade Rules and to move on to Preview.</li>
+            </ol>
+            <h3 class="Heading3">Preview:</h3>
+            <p>All fields will auto-populate.&#160; For risk per trade, you can select a dollar amount/trade, contracts/trade or a custom amount created manually.</p>
+            <ol>
+                <li value="1">Click <img src="../Resources/Images/backtestbuttonarrow_68x26.jpg" style="width: 68;height: 26;" />to have the system run the tests. <img src="../Resources/Images/ImportWizard5_735x144.png" style="width: 735;height: 144;" class="screenshots" /></li>
+                <li value="2">Select <img src="../Resources/Images/viewreportsbutton_74x20.jpg" style="width: 74;height: 20;" /> to go to the BackTest results page. </li>
+            </ol>
+            <p>&#160;</p>
+        </div>
+        <p>&#160;</p>
+        <p style="font-size: 8pt;">&#160;</p>
+        <div class="FooterTable" style="margin-left: -17px;margin-right: -17px;orphans: 0;page-break-after: always;column-break-after: always;frame-break-after: always;widows: 0;border-left-style: solid;border-left-width: 0px;border-left-color: #4169e1;border-right-style: solid;border-right-width: 0px;border-right-color: #4169e1;border-top-style: solid;border-top-width: 5px;border-top-color: #f7dc68;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #4169e1;background-color: #143657;padding-left: 17px;padding-right: 17px;padding-top: 10px;padding-bottom: 0px;margin-bottom: -25px;font-size: 8pt;">
+            <hr width="100%" size="0" align="center" />
+            <p style="text-align: center;"><span style="font-family: Lato; font-size: 8pt;">Copyright 2017 © Capmark Solutions LLC. All Rights Reserved | Disclaimer</span>
+            </p>
+        </div>
+    </body>
+</html>

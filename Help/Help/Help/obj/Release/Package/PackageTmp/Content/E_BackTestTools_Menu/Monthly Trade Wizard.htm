@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <!-- saved from url=(0016)http://localhost -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Monthly Trade Wizard</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body id="" style="background-color: #ffffff;">
+        <div class="TopicContent">
+            <h2>Monthly Trade Wizard</h2>
+            <p><span class="Emphasis">Monthly Trades Backtest</span> is designed to help you design a strategy based on systematic calendar trading with monthly options expirations.</p>
+            <p>Backtest using monthly calendar trading strategies such as Iron Condors and variations of butterflies as a way to generate income.</p>
+            <p>&#160;</p>
+            <p>In this section, we are going to show you how to perform a BackTest in the <span class="Emphasis">Monthly Trade Modeling Wizard</span> by using an example:</p>
+            <ul class="ul_1">
+                <li class="ListParagraph_1" value="1">We are going to conduct a BackTest for a monthly <span class="SetOffSecondLevel">Iron Condor</span> strategy on <span class="SetOffFirstLevel">SPY</span> from 01/03/2007. </li>
+                <li class="ListParagraph_1" value="2">We are going to open an Iron Condor one day after the previous month’s expiration and close the trade one day before the current expiration.</li>
+                <li class="ListParagraph_1" value="3">The Iron Condor will have the following characteristics:</li>
+            </ul>
+            <ul class="Second_Level">
+                <li value="1">
+                    <p>Days to expiration: minimum of 5 days to maximum of 35 days</p>
+                </li>
+                <li class="ListParagraph_2" value="2">Strike Selection :<ul><li value="1"><p>Long Call: 25-40 Delta range</p></li><li value="2">Minimum width between calls: $2</li><li value="3">Short Call: 30-45 Delta range</li><li value="4">Minimum Distance between shorts: $5</li><li value="5">Short Put: 30-45 Delta range</li><li value="6">Minimum width between puts: $2</li><li value="7">Long Put: 25-40 Delta range</li></ul></li>
+                <li value="3">
+                    <p>Profit target: 100% of maximum profit</p>
+                </li>
+                <li class="ListParagraph_2" value="4">Stop loss: 25% of maximum risk</li>
+            </ul>
+            <p>There are 3 steps to complete this BackTest: <span class="SetOffSecondLevel">Entry-Exit Dates &gt;&gt; Trade Rules &gt;&gt; Preview</span></p>
+            <h3 class="Heading3">Entry-Exit Dates:</h3>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Input a name for the dates to be saved under <span class="SetOffSecondLevel">SPY Iron Condor</span>.&#160; </li>
+                <li class="ListParagraph" value="2">Input the stock symbol as<span class="SetOffFirstLevel"> SPY</span>.&#160; </li>
+                <li class="ListParagraph" value="3">Input the date range to be tested in From Date <span class="SetOffSecondLevel">01/03/2007</span> and To Date <span class="SetOffSecondLevel">05/07/2017</span>.</li>
+                <li class="ListParagraph" value="4">For trade entry select <span class="SetOffSecondLevel">Days after Monthly Expiration</span> and  Number of Days as <span class="SetOffSecondLevel">1</span>. </li>
+                <li class="ListParagraph" value="5">For trade exit select <span class="SetOffSecondLevel">Days before Monthly Expiration</span> and input Number of Days as <span class="SetOffSecondLevel">1</span> and Skip as <span class="SetOffSecondLevel">1</span> monthly expiration.</li>
+                <li class="ListParagraph" value="6">Click <img src="../Resources/Images/nextbutton_55x30.jpg" style="width: 55;height: 30;" /> to save your Entry-Exit Dates and to move on to Trade Rules.<img src="../Resources/Images/MonthlyWizard1_1026x355.jpg" style="width: 1026;height: 355;" class="screenshots" /></li>
+            </ol>
+            <h3 class="Heading3">Trade Rules:</h3>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Input a name for the trade rules to be saved under <span class="SetOffSecondLevel">SPY IC</span>.&#160; </li>
+                <li class="ListParagraph" value="2">Click the Strategy drop down menu and select <span class="SetOffSecondLevel">Iron Condor</span>.</li>
+            </ol>
+            <ol start="3" class="ol_1">
+                <li class="ListParagraph" value="3">Input the minimum and maximum days to expiration as <span class="SetOffSecondLevel">5</span> and <span class="SetOffSecondLevel">35</span>. <img src="../Resources/Images/MonthlyWizard2_766x383.jpg" style="width: 766;height: 383;" class="screenshots" /></li>
+                <li class="ListParagraph" value="4">Input the minimum and maximum delta ranges: </li>
+            </ol>
+            <ul class="Second_Level">
+                <li value="1">Long Call (Buy1) range <span class="SetOffSecondLevel">25</span> and <span class="SetOffSecondLevel">40</span></li>
+                <li value="2">Short Call (Sell1) range <span class="SetOffSecondLevel">30</span> and <span class="SetOffSecondLevel">45</span> <![CDATA[ ]]></li>
+                <li value="3">Long Put (Buy2) range <span class="SetOffSecondLevel">25</span> and <span class="SetOffSecondLevel">40</span> <![CDATA[ ]]></li>
+                <li value="4">Short Put (Sell2) range <span class="SetOffSecondLevel">30</span> and <span class="SetOffSecondLevel">45</span></li>
+            </ul>
+            <ol start="3" class="ol_1">
+                <li class="ListParagraph" value="3">Input the minimum distance between the short legs as <span class="SetOffSecondLevel">5</span>; the minimum width between the calls as <span class="SetOffSecondLevel">2</span>; and the minimum width between the puts as <span class="SetOffSecondLevel">2</span>.</li>
+                <li class="ListParagraph" value="4">Input the profit target % as <span class="SetOffSecondLevel">100</span> based off the <span class="SetOffSecondLevel">Max Profit</span>.</li>
+                <li class="ListParagraph" value="5">Input the stop loss % as<span class="SetOffSecondLevel"> 25</span> based off the <span class="SetOffSecondLevel">Max Risk</span>.<img src="../Resources/Images/MonthlyWizard3_705x315.jpg" style="width: 705;height: 315;" class="screenshots" /></li>
+                <li class="ListParagraph" value="6">Click <img src="../Resources/Images/nextbutton_58x33.jpg" style="width: 58;height: 33;" /> to save your Entry-Exit Dates and to move on to Preview.</li>
+            </ol>
+            <h3 class="Heading3">Preview:</h3>
+            <p>All fields will auto-populate.&#160; For risk per trade, you can select a dollar amount/trade, contracts/trade or a custom amount created manually.</p>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Click the <img src="../Resources/Images/backtestbuttonarrow_81x31.jpg" style="width: 81;height: 31;" /> to have the system run the tests. <img src="../Resources/Images/MonthlyWizard4_757x160.jpg" class="screenshots" style="width: 757;height: 160;" /></li>
+                <li class="ListParagraph" value="2">Select <img src="../Resources/Images/viewreportsbutton_86x23.jpg" style="width: 86;height: 23;" /> to go to the BackTest results page. <img src="../Resources/Images/MonthlyWizard5_797x346.jpg" style="width: 797;height: 346;" class="screenshots" /></li>
+            </ol>
+        </div>
+        <p>&#160;</p>
+        <p style="font-size: 8pt;">&#160;</p>
+        <div class="FooterTable" style="margin-left: -17px;margin-right: -17px;orphans: 0;page-break-after: always;column-break-after: always;frame-break-after: always;widows: 0;border-left-style: solid;border-left-width: 0px;border-left-color: #4169e1;border-right-style: solid;border-right-width: 0px;border-right-color: #4169e1;border-top-style: solid;border-top-width: 5px;border-top-color: #f7dc68;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #4169e1;background-color: #143657;padding-left: 17px;padding-right: 17px;padding-top: 10px;padding-bottom: 0px;margin-bottom: -25px;font-size: 8pt;">
+            <hr width="100%" size="0" align="center" />
+            <p style="text-align: center;"><span style="font-family: Lato; font-size: 8pt;">Copyright 2017 © Capmark Solutions LLC. All Rights Reserved | Disclaimer</span>
+            </p>
+        </div>
+    </body>
+</html>

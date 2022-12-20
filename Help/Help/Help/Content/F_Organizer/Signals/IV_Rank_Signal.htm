@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <!-- saved from url=(0016)http://localhost -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>IV Rank Signal</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../../Resources/Stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body id="" style="background-color: #ffffff;">
+        <div class="TopicContent">
+            <h1>IV Rank Signal</h1>
+            <p>Implied Volatility Rank (IVR) tells us whether implied volatility is high or low in a specific underlying based on the past year of implied volatility data. For example, if XYZ has had an implied volatility between 30 and 60 over the past year and implied volatility is currently trading at 45, XYZ would have an IVR of 50%.</p>
+            <p>When IVR is high (above 50%), we can expect a contraction. When IVR is low (below 50%), we can expect an expansion.</p>
+            <p>IVR helps us decide whether to use a credit or debit strategy. While other considerations need to be taken into account, an IVR above 50% might be indicative of good options selling opportunities, while an IVR below 50% might be indicative of buying opportunities - both due to the mean reverting nature of volatility.</p>
+            <p>Composite Volatility of all options for a symbol is calculated using VIX style calculation. Once this number is calculated, it can be extrapolated into 30, 60, 90, 120, 150, 180 and 360 days. Once this number is calculated every day, look for 52 week high and low. This can be d into four quartiles.</p>
+            <p>Quartile 1 (Q1) being low and Quartile 4 (Q4) being high.</p>
+            <p>&#160;</p>
+            <p><span class="SetOffFirstLevel">Example:</span>
+            </p>
+            <blockquote>
+                <p><span class="SetOffSecondLevel">Current</span>
+                </p>
+                <p>To select symbols that have 30 days current with IV value in Quartile 3:  select Type=Current, IV Days=30 and Quartile=Q3.</p>
+                <p>
+                    <img src="../../Resources/Images/IVRankSignal1.png" alt="" title="" class="Signalsscreens" />
+                </p>
+                <p>&#160;</p>
+                <p><span class="SetOffSecondLevel">Transition</span>
+                </p>
+                <p>To select symbols that are expiring in 30 days with IV rank going into Q3 from Q2 and increasing in volatility:  select Type=Transition, IV Days=30, Quartile=Q3 and Direction=Increase.</p>
+                <p>
+                    <img src="../../Resources/Images/IVRankSignal2.png" alt="" title="" class="Signalsscreens" />
+                </p>
+                <p>&#160;</p>
+                <p><span class="SetOffSecondLevel">New High (52 weeks)</span>
+                </p>
+                <p>To select symbols that have New High in IV across options expiring in 30 days:  select Type=New High (52 weeks) and IV Days=30.</p>
+                <p>
+                    <img src="../../Resources/Images/IVRankSignal3.png" alt="" title="" class="Signalsscreens" />
+                </p>
+                <p>&#160;</p>
+                <p><span class="SetOffSecondLevel">New Low (52 weeks)</span>
+                </p>
+                <p>To select symbols that have a New Low in IV across options expiring in 60 days:  select Type=New Low (52 weeks) and IV Days=60.</p>
+                <p>
+                    <img src="../../Resources/Images/IVRankSignal4.png" alt="" title="" class="Signalsscreens" />
+                </p>
+                <p>&#160;</p>
+                <p><span class="SetOffSecondLevel">IV Rank</span>
+                </p>
+                <p>To find symbols that expiring in 90 days with IV Rank is greater than or equal to 55:  select Type=IV Rank, IV Days=90, Operator=“&gt;=” and Value=55.</p>
+                <p>
+                    <img src="../../Resources/Images/IVRankSignal5.png" alt="" title="" class="Signalsscreens" />
+                </p>
+            </blockquote>
+        </div>
+        <p>&#160;</p>
+        <p style="font-size: 8pt;">&#160;</p>
+        <div class="FooterTable" style="margin-left: -17px;margin-right: -17px;orphans: 0;page-break-after: always;column-break-after: always;frame-break-after: always;widows: 0;border-left-style: solid;border-left-width: 0px;border-left-color: #4169e1;border-right-style: solid;border-right-width: 0px;border-right-color: #4169e1;border-top-style: solid;border-top-width: 5px;border-top-color: #f7dc68;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #4169e1;background-color: #143657;padding-left: 17px;padding-right: 17px;padding-top: 10px;padding-bottom: 0px;margin-bottom: -25px;font-size: 8pt;">
+            <hr width="100%" size="0" align="center" />
+            <p style="text-align: center;"><span style="font-family: Lato; font-size: 8pt;">Copyright 2017 © Capmark Solutions LLC. All Rights Reserved | Disclaimer</span>
+            </p>
+        </div>
+    </body>
+</html>

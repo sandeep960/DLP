@@ -1,0 +1,1 @@
+define({r:0.5,st:'Stem',n:1,t:[0],u:['../Content/A_Introduction Topics/Introduction.htm'],s:['$','name'],p:[['$',23],['aroon',74],['criteria',33],['expanding',19],['inside',50],['of',16],['pwd',21],['state_2',21],['this',33],['will',33]]});

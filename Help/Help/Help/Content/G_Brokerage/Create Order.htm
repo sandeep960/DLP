@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]">
+    <!-- saved from url=(0016)http://localhost -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Create Order</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body id="" style="background-color: #ffffff;">
+        <div class="TopicContent">
+            <h2 class="copyright_1">Create Order</h2>
+            <p class="p_1"><span class="copyright">The </span><span class="Emphasis">Create Order</span><span class="copyright"> page lets the user create their trading orders from this page.</span>
+            </p>
+            <p class="p_1">
+                <img src="../Resources/Images/Createorder1_1002x222.png" alt="" title="" style="width: 1002;height: 222;" class="screenshots" />
+            </p>
+            <p class="p_1">
+                <h3>Creating an order</h3>
+            </p>
+            <ol>
+                <li value="1">Input a <span class="SetOffSecondLevel">symbol</span>. This displays the price, ask, bid and volume details of the symbol. <img src="../Resources/Images/createorder2_918x233.png" alt="" title="" style="width: 918;height: 233;" class="screenshots" /></li>
+                <li value="2">Select a <span class="SetOffSecondLevel">Strategy</span> and <span class="SetOffSecondLevel">Risk Per Trade</span> from the list. <img src="../Resources/Images/createorder3_827x326.png" alt="" title="" style="width: 827;height: 326;" class="screenshots" />.</li>
+            </ol>
+            <p style="text-indent: 0.5in;">This displays the following page: </p>
+            <blockquote>
+                <p>
+                    <img src="../Resources/Images/createorder4_879x382.png" alt="" title="" style="width: 879;height: 382;" class="screenshots" />
+                </p>
+                <p><span class="SetOffSecondLevel">Description of fields:</span>
+                </p>
+            </blockquote>
+            <table style="width: 100%;">
+                <col style="width: 67px;" />
+                <col style="width: 168px;" />
+                <col style="width: 125px;" />
+                <col />
+                <tbody>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Symbol</span>
+                        </td>
+                        <td>Mandatory</td>
+                        <td>It is a text-field to input stock symbol.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Strategy </span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>A drop down menu with list of strategies.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Risk Per Trade</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>A drop down menu with list of Risk Per Trade. See <a href="../F_Organizer/Risk Per Trade.htm">Risk Per Trade</a> for details.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Duration </span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>Duration can be <span class="SetOffSecondLevel">Good-Til-Cancelled (GTC)</span>&#160;order that lasts until the order is completed or canceled or a <span class="SetOffSecondLevel">day</span> order that lasts until the end of trading day.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Brokerage</span>
+                        </td>
+                        <td>Mandatory</td>
+                        <td>Name of the brokerage, in this case Tradier.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Accounts</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>Account number of the brokerage account.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Order Type</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>
+                            <p>This has 2 choices:</p>
+                            <ul class="FirstLevelLessIndentation">
+                                <li value="1"><span class="SetOffSecondLevel">Market</span> - A market order is a buy or sell order to be executed immediately at current market prices. As long as there are willing sellers and buyers, market orders are filled.</li>
+                                <li value="2"><span class="SetOffSecondLevel">Limit</span> - A limit order is an order to buy a security at no more than a specific price, or to sell a security at no less than a specific price.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Spread</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>The Buy-Sell Spread  is the difference between the prices quoted.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Price</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>The quoted price to trade the symbol.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td>
+                            <p>&#160;</p>
+                            <p><span class="SetOffSecondLevel">OPTION&#160;LEGS</span>
+                            </p>
+                        </td>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Entry Date</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>Date when the order is created.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Type</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">BTO</span>&#160;by default. BTO&#160;is a <span class="SetOffSecondLevel">Buy to Open</span> that represents the opening of a long call or put positions. A <span class="SetOffSecondLevel">buy to open</span> order has a distinguishing characteristic where the option position is not held short in the account during the transaction. The <span class="SetOffSecondLevel">sell to close</span>(STO) order is used to exit a position taken with a buy to open order.
+
+</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Leg</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>It is the trading contract.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Option Type</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>There are many different types of options that can be traded and these can be categorized in a number of ways. In a very broad sense, there are two main types: calls and puts. Calls give the buyer the right to buy the underlying asset, while puts give the buyer the right to sell the underlying asset.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Expiry Date</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>It is a drop down menu to select the expiry date of the order.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Strike</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>It is a drop down menu to select the strike price of the order.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Price</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>Automatically populated after selecting strike price.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Bid</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>The minimum bid price of the symbol.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Ask</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>The maximum bid price of the symbol.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Cnts</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>It is a text-field to input number of contracts you want to purchase.</td>
+                    </tr>
+                    <tr>
+                        <td>&#160;</td>
+                        <td><span class="SetOffSecondLevel">Option Symbol</span>
+                        </td>
+                        <td>&#160;</td>
+                        <td>
+                            <p>This displays the Option Symbol number.</p>
+                            <p>&#160;</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                <p> 3. Select the <span class="SetOffSecondLevel">Price, Expiry Date, Strike</span> and <span class="SetOffSecondLevel">Count</span>.</p>
+                <blockquote>
+                    <p>
+                        <img src="../Resources/Images/createorder5_930x448.png" alt="" title="" style="width: 930;height: 448;" />
+                    </p>
+                </blockquote>
+            </blockquote>
+            <blockquote>
+                <p>4. Click <img src="../Resources/Images/previewbutton.png" alt="" title="" /> to see the order details and submit.</p>
+            </blockquote>
+            <blockquote>
+                <blockquote>
+                    <p>
+                        <img src="../Resources/Images/createorder6_744x360.png" alt="" title="" style="width: 744;height: 360;" class="screenshots" />
+                    </p>
+                </blockquote>
+            </blockquote>
+        </div>
+        <p>&#160;</p>
+        <p style="font-size: 8pt;">&#160;</p>
+        <div class="FooterTable" style="margin-left: -17px;margin-right: -17px;orphans: 0;page-break-after: always;column-break-after: always;frame-break-after: always;widows: 0;border-left-style: solid;border-left-width: 0px;border-left-color: #4169e1;border-right-style: solid;border-right-width: 0px;border-right-color: #4169e1;border-top-style: solid;border-top-width: 5px;border-top-color: #f7dc68;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #4169e1;background-color: #143657;padding-left: 17px;padding-right: 17px;padding-top: 10px;padding-bottom: 0px;margin-bottom: -25px;font-size: 8pt;">
+            <hr width="100%" size="0" align="center" />
+            <p style="text-align: center;"><span style="font-family: Lato; font-size: 8pt;">Copyright 2017 © Capmark Solutions LLC. All Rights Reserved | Disclaimer</span>
+            </p>
+        </div>
+    </body>
+</html>

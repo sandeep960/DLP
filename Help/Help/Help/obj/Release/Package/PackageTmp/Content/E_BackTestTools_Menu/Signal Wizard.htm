@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="[%=System.LinkedTitle%]|[%=System.LinkedTitle%]">
+    <!-- saved from url=(0016)http://localhost -->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Signal Wizard</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/styles.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body id="" style="background-color: #ffffff;">
+        <div class="TopicContent">
+            <h2>Signal Wizard</h2>
+            <p><span class="Emphasis">Signal Backtest</span> trading models use indicators such as RSI, MACD, moving averages as the criteria for entering and exiting a trade.</p>
+            <p>&#160;</p>
+            <p>In this section, we are going to show you how to perform a BackTest in the <span class="span_2"><span class="Emphasis">Signal Modeling Wizard</span></span> by using an example:</p>
+            <ul class="ul_1">
+                <li class="ListParagraph_1" value="1">We are going to BackTest a <span class="SetOffSecondLevel">Bullish strategy</span>  for <span class="SetOffFirstLevel">NFLX</span> over the past 10 years.&#160; </li>
+                <li class="ListParagraph_1" value="2">We are going to purchase one long call every time the RSI(5) crosses below 20 and exit the trade when the RSI(5) crosses above 60.</li>
+                <li class="ListParagraph_1" value="3">The long call will have the following characteristics:</li>
+            </ul>
+            <ul class="Second_Level">
+                <li value="1">Days to expiration: minimum of 30 days to maximum of 70 days</li>
+                <li value="2">Strike Selection: 40-60 Delta Range</li>
+                <li value="3">Profit target: 25% of the Initial Cost</li>
+                <li value="4">Stop loss: 50% of the Initial Cost</li>
+            </ul>
+            <p>There are 5 steps to complete this BackTest: <span class="SetOffSecondLevel">Entry Signal &gt;&gt; Exit Signal &gt;&gt; Entry-Exit Dates &gt;&gt; Trade Rules &gt;&gt; Preview</span></p>
+            <h3>Entry Signal:</h3>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Input a name for the signal to be saved under <span class="SetOffSecondLevel">RSI(5) cross below 20</span>.&#160; </li>
+                <li class="ListParagraph" value="2">Select the RSI indicator and fill in the Days as <span class="SetOffSecondLevel">5</span>, Operator as <span class="SetOffSecondLevel">Cross below</span> and Value as <span class="SetOffSecondLevel">20</span> then click  <img src="../Resources/Images/Xbuttononsignal.png" /> to close and save.<img src="../Resources/Images/SignalWizard1_862x395.png" class="screenshots" style="width: 862;height: 395;" /></li>
+                <li class="ListParagraph" value="3">Click <img src="../Resources/Images/nextbutton_49x28.jpg" style="width: 49;height: 28;" /> to save your <span class="SetOffSecondLevel">Entry Signal</span> and to move on to <span class="SetOffSecondLevel">Exit Signal</span>. </li>
+            </ol>
+            <h3>Exit Signal:</h3>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Input a name for the signal to be saved under <span class="SetOffSecondLevel">RSI(5) cross above 60</span>.&#160; </li>
+                <li class="ListParagraph" value="2">Select the RSI indicator and fill in the Days as <span class="SetOffSecondLevel">5</span>, Operator as <span class="SetOffSecondLevel">Cross above</span> and Value as <span class="SetOffSecondLevel">60</span> then click <img src="../Resources/Images/Xbuttononsignal.png" />  to close and save.<img src="../Resources/Images/SignalWizard2_884x351.png" style="width: 884;height: 351;" class="screenshots" /></li>
+                <li class="ListParagraph" value="3">Click <img src="../Resources/Images/nextbutton_53x31.jpg" style="width: 53;height: 31;" /> to save your<span class="SetOffSecondLevel"> Exit Signal</span> and to move on to<span class="SetOffSecondLevel"> Entry-Exit Dates</span>. </li>
+            </ol>
+            <h3>Entry-Exit Dates:</h3>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Type in a name for the dates to be saved under <span class="SetOffSecondLevel">NFLX Bullish RSI(5)</span>.&#160; </li>
+                <li class="ListParagraph" value="2">Select the stock you want to test <span class="SetOffFirstLevel">NFLX</span>.&#160; </li>
+                <li class="ListParagraph" value="3">Enter the date range to be tested in From Date as <span class="SetOffSecondLevel">01/03/2007</span> and To Date as <span class="SetOffSecondLevel">05/08/2017</span>.</li>
+                <li class="ListParagraph" value="4">Select the entry signal as <span class="SetOffSecondLevel">RSI(5) cross below 20</span> (created in Entry) and exit signal as <span class="SetOffSecondLevel">RSI(5)&#160;cross above 60</span> (created in Exit). <img src="../Resources/Images/SignalWizard3_907x278.png" style="width: 907;height: 278;" class="screenshots" /></li>
+                <li class="ListParagraph" value="5">Click <img src="../Resources/Images/nextbutton_45x26.jpg" style="width: 45;height: 26;" />to save your Entry-Exit Dates and to move on to Trade Rules. </li>
+            </ol>
+            <h3 class="Heading3">Trade Rules:</h3>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Type a name for the trade rules to be saved under <span class="SetOffSecondLevel">NFLX Long Call</span>.&#160; </li>
+                <li class="ListParagraph" value="2">Click the <span class="SetOffSecondLevel">Strategy</span> drop down menu and select <span class="SetOffSecondLevel">Long Call</span>. <img src="../Resources/Images/SignalWizard4_782x296.png" style="width: 782;height: 296;" class="screenshots" /></li>
+            </ol>
+            <ol start="3" class="ol_1">
+                <li class="ListParagraph" value="3">Input the minimum and maximum days to expiration as <span class="SetOffSecondLevel">30</span> and <span class="SetOffSecondLevel">70</span>.</li>
+                <li class="ListParagraph" value="4">Input the minimum and maximum delta range as <span class="SetOffSecondLevel">40</span> and <span class="SetOffSecondLevel">60</span>.</li>
+                <li class="ListParagraph" value="5">Input the profit target % as <span class="SetOffSecondLevel">25</span> based off the <span class="SetOffSecondLevel">InitialCost</span>.</li>
+                <li class="ListParagraph" value="6">Input the stop loss % as <span class="SetOffSecondLevel">50</span> based off the <span class="SetOffSecondLevel">InitialCost</span>.<img src="../Resources/Images/SignalWizard5_817x348.png" style="width: 817;height: 348;" class="screenshots" /></li>
+                <li class="ListParagraph" value="7">Click <img src="../Resources/Images/nextbutton_45x26.jpg" style="width: 45;height: 26;" /> to save your Trade Rules and to move on to Preview. </li>
+            </ol>
+            <h3>Preview:</h3>
+            <p>All fields will auto-populate.&#160; For risk per trade, you can select a dollar amount/trade, contracts/trade or a custom amount created manually.</p>
+            <ol start="1" class="ol_1">
+                <li class="ListParagraph" value="1">Click <img src="../Resources/Images/backtestbuttonarrow_76x29.jpg" style="width: 76;height: 29;" /> to have the system run the tests. <img src="../Resources/Images/SignalWizard6_872x201.png" style="width: 872;height: 201;" class="screenshots" /></li>
+                <li class="ListParagraph" value="2">Select <img src="../Resources/Images/viewreportsbutton_74x20.jpg" style="width: 74;height: 20;" /> to go to the BackTest results page.</li>
+            </ol>
+        </div>
+        <p>&#160;</p>
+        <p style="font-size: 8pt;">&#160;</p>
+        <div class="FooterTable" style="margin-left: -17px;margin-right: -17px;orphans: 0;page-break-after: always;column-break-after: always;frame-break-after: always;widows: 0;border-left-style: solid;border-left-width: 0px;border-left-color: #4169e1;border-right-style: solid;border-right-width: 0px;border-right-color: #4169e1;border-top-style: solid;border-top-width: 5px;border-top-color: #f7dc68;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #4169e1;background-color: #143657;padding-left: 17px;padding-right: 17px;padding-top: 10px;padding-bottom: 0px;margin-bottom: -25px;font-size: 8pt;">
+            <hr width="100%" size="0" align="center" />
+            <p style="text-align: center;"><span style="font-family: Lato; font-size: 8pt;">Copyright 2017 © Capmark Solutions LLC. All Rights Reserved | Disclaimer</span>
+            </p>
+        </div>
+    </body>
+</html>
